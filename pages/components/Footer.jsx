@@ -7,6 +7,7 @@ import gitHubImage from "../../static/images/github.svg"
 import twitterImage from "../../static/images/twitter.svg"
 import telegramImage from "../../static/images/telegram.svg"
 import linkedinImage from "../../static/images/linkedin.png"
+import mediumImage from "../../static/images/medium.svg"
 
 export default function Footer(options) {
     const tl = options.timeline;
@@ -65,6 +66,15 @@ export default function Footer(options) {
                             <a href="https://t.me/+iFQ04zUAstJlZmI8" target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src={telegramImage}
+                                    alt=""
+                                    width={16}
+                                    height={17}
+                                />
+                            </a>
+
+                            <a href="https://medium.com/@stratusagency" target="_blank" rel="noopener noreferrer">
+                                <Image
+                                    src={mediumImage}
                                     alt=""
                                     width={16}
                                     height={17}
