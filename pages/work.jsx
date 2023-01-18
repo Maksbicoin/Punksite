@@ -38,7 +38,7 @@ export default function Work() {
     return (
         <>
             <Head>
-                <title>STRATUS — Work</title>
+                <title>STRATUS - Work</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 

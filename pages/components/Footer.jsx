@@ -90,7 +90,7 @@ export default function Footer(options) {
 
                     <div className="list">
                         {/* <Link href="/rgpd" onClick={() => tl ? tl.killAll() : undefined}>RGPD</Link> */}
-                        <Link href="/legal" onClick={() => tl ? tl.killAll() : undefined}>Legal</Link>
+                        <Link href="/legal.html" onClick={() => tl ? tl.killAll() : undefined}>Legal</Link>
                     </div>
                 </div>
             </div>

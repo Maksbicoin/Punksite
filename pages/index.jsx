@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 
 import Head from "next/head"
 import Image from "next/image"
@@ -22,13 +22,18 @@ import cirrusWorkImage from "../static/images/cirrus-work.webp"
 import netalysImage from "../static/images/netalys.webp"
 import netalysWorkImage from "../static/images/netalys-work.webp"
 import launcherAutoImage from "../static/images/launcher-auto.webp"
+import lightNodeImage from "../static/images/light-node.webp"
+import lightNodeWorkImage from "../static/images/light-node-work.webp"
+
 import iconBlackImage from "../static/images/icon-black.webp"
-import questionImage from "../static/images/question.jpg"
-import chatImage from "../static/images/chat.jpg"
-import computerImage from "../static/images/computer.jpg"
-import handShakeImage from "../static/images/hand-shake.jpg"
-import heartImage from "../static/images/heart.jpg"
-import starsImage from "../static/images/stars.jpg"
+import questionImage from "../static/images/question.webp"
+import chatImage from "../static/images/chat.webp"
+import computerImage from "../static/images/computer.webp"
+import handShakeImage from "../static/images/hand-shake.webp"
+import heartImage from "../static/images/heart.webp"
+import starsImage from "../static/images/stars.webp"
+// import pricingIcon from "../static/images/pricing_icon.svg"
+
 import Navbar from "./components/Navbar"
 
 gsap.registerPlugin(ScrollTrigger);
@@ -216,7 +221,7 @@ export default function App() {
 	return (
 		<>
 			<Head>
-				<title>STRATUS — Expert Blockchain Agency</title>
+				<title>STRATUS - Blockchain, Crypto, & Web 3.0 PR Agency</title>
 				<link rel="shortcut icon" href="/static/favicon.ico" />
 			</Head>
 
@@ -237,7 +242,7 @@ export default function App() {
 				</div>
 
 				<div className="right">
-					<PortfolioImagesColumn list={[cirrusImage, bbcsLtddImage, launcherAutoImage]} />
+					<PortfolioImagesColumn list={[cirrusImage, lightNodeImage, launcherAutoImage]} />
 				</div>
 			</section>
 
@@ -292,6 +297,13 @@ export default function App() {
 				<div className="row">
 					<div className="left">
 						<WorkElement options={{
+							icon_url: lightNodeWorkImage,
+							url: 'https://medium.com/@stratusagency/stratus-commits-to-the-development-of-web-3-0-677e82406537',
+							date: 2023,
+							title: "STRATUS commits to the development of Web 3.0"
+						}} />
+
+						<WorkElement options={{
 							icon_url: cirrusWorkImage,
 							url: 'https://cirrus.stratusagency.io',
 							date: 2022,
@@ -322,18 +334,17 @@ export default function App() {
 						}} />
 
 						<WorkElement options={{
-							icon_url: bbcsLtddWorkImage,
-							url: 'https://bbcs.netlify.app',
-							date: 2021,
-							title: "BBCS & LTDD"
-						}} />
-
-
-						<WorkElement options={{
 							icon_url: solidityDocsWorkImage,
 							url: 'https://docs.soliditylang.org/fr/v0.8.11/',
 							date: 2022,
 							title: "SOLIDITY DOCUMENTATION"
+						}} />
+
+						<WorkElement options={{
+							icon_url: bbcsLtddWorkImage,
+							url: 'https://bbcs.netlify.app',
+							date: 2021,
+							title: "BBCS & LTDD"
 						}} />
 					</div>
 				</div>
@@ -428,24 +439,224 @@ export default function App() {
 
 				<div className="row">
 					<div className="services-item">
-						<span>convert to web 3.0</span>
-						<span>branding</span>
+						<span>NFT provider</span>
+						<span>ETH nodes</span>
+						<span>ERC-721</span>
+						<span>ERC-1155</span>
+						<span>ERC-998</span>
+					</div>
+
+					<div className="services-item">
+						<span>EIP analysis</span>
+						<span>ETH validator</span>
 						<span>platforms</span>
-					</div>
-
-					<div className="services-item">
 						<span>development</span>
-						<span>programming</span>
-						<span>audit</span>
+						<span>PoS & PoW</span>
 					</div>
 
 					<div className="services-item">
-						<span>marketing</span>
-						<span>communication</span>
+						<span>programming</span>
 						<span>performance</span>
+						<span>branding</span>
+						<span>marketing</span>
+						<span>audit</span>
 					</div>
 				</div>
 			</section>
+			{/* 
+			<section className="pricing">
+				<div className="headline">
+					<h3>No surprises. No hassles. Just right.</h3>
+					<h2>Services & Pricing</h2>
+				</div>
+
+				<div className="row">
+					<div className="element">
+						<h3>Branding</h3>
+
+						<p>Bring your brand to life with a refreshing logo, style guide and more.</p>
+
+						<span className="price">$4,950</span>
+
+						<p>Branding includes:</p>
+
+						<ul>
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Branding book</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Visual identity</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Content strategy</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Social media</p>
+								</div>
+							</li>
+						</ul>
+						<a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer">GET STARTED</a>
+					</div>
+
+					<div className="element">
+						<span className="popular">Popular</span>
+
+						<h3>Website</h3>
+
+						<p>Premium website design and professional Webflow development.</p>
+
+						<span className="price">$9,950</span>
+
+						<p>Everything in Branding, plus:</p>
+
+						<ul>
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Up to 5 Pages with animations</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Design system in Webflow</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>2 weeks of QA</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Responsive for mobile devices</p>
+								</div>
+							</li>
+						</ul>
+						<a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer">GET STARTED</a>
+					</div>
+
+					<div className="element">
+						<h3>Enterprise</h3>
+
+						<p>For companies that need real-time communication and unlimited requests.</p>
+
+						<span className="price">Custom</span>
+
+						<p>Everything in Website, plus:</p>
+
+						<ul>
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Private slack</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Unlimited requests</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>Support priority</p>
+								</div>
+							</li>
+
+							<li>
+								<div className="row">
+									<Image
+										src={pricingIcon}
+										priority
+										alt="icon"
+									/>
+
+									<p>SEO optimization</p>
+								</div>
+							</li>
+						</ul>
+						<a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer" className="custom">CONTACT SALES</a>
+					</div>
+				</div>
+			</section> */}
 
 			<section className="qa">
 				<h2>FREQUENTLY ASKED QUESTIONS</h2>
@@ -463,7 +674,7 @@ export default function App() {
 
 					<QuestionElement options={{
 						title: 'how many revisions per project?',
-						text: 'We give you revisions as much as you want, until the end of the contract.',
+						text: 'We give you 2 revisions. Beyond this capacity, the following revisions will be charged.',
 					}} />
 
 					<QuestionElement options={{

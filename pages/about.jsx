@@ -7,7 +7,7 @@ export default function Legal() {
     return (
         <>
             <Head>
-                <title>STRATUS — Legal</title>
+                <title>STRATUS - Legal</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 
