@@ -104,6 +104,11 @@ img {
   grid-template-rows: auto;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .grain {
   position: fixed;
   left: 0%;
@@ -180,7 +185,8 @@ section.navbar div.element:last-child {
   margin: 0;
 }
 
-section.navbar div.row, section.navbar div.row div.element {
+section.navbar div.row,
+section.navbar div.row div.element {
   overflow: hidden;
 }
 
@@ -758,7 +764,7 @@ section.call-to-action a {
   align-items: center;
   border-radius: 8px;
   color: white;
-  background-color: #5C23FB;
+  background-color: #5c23fb;
   -webkit-transition: background-color 600ms cubic-bezier(0.23, 1, 0.32, 1);
   transition: background-color 600ms cubic-bezier(0.23, 1, 0.32, 1);
   font-family: "Basementgrotesque v1", sans-serif;
@@ -780,24 +786,112 @@ section.call-to-action div.background {
   width: 100%;
   height: 120%;
   border-radius: 50%;
-  background-color: #5C23FB;
+  background-color: #5c23fb;
   opacity: 0.5;
   -webkit-filter: blur(100px);
   filter: blur(100px);
 }
 
-section.legal {
+section.legal,
+section.about {
   display: grid;
   place-items: center;
 }
 
-section.legal div.content {
+section.legal div.content,
+section.about div.content {
   width: 95vw;
   height: 450px;
 }
 
-section.legal div.content h2 {
+section.legal div.content h2,
+section.about div.content h2 {
   margin: 0 0 20px 0;
+}
+
+section.about div.wallpaper {
+  display: grid;
+  place-items: center;
+
+  margin: 0 0 120px 0;
+  width: 100%;
+}
+
+section.about div.wallpaper img {
+  max-width: 998px;
+  width: 100%;
+  height: auto;
+}
+
+section.about div.content {
+  height: auto;
+  min-height: 450px;
+}
+
+section.about div.content h1 {
+  font-size: 54px;
+}
+
+section.about div.content h2 {
+  font-size: 40px;
+}
+
+section.about div.content > div.row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 0 100px 0;
+}
+
+section.about div.content > div.row > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  width: 50%;
+}
+
+section.about div.content > div.row > div a {
+    padding: 25px 32px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    background-color: #000;
+    -webkit-transition: background-color 600ms cubic-bezier(.23, 1, .32, 1);
+    transition: background-color 600ms cubic-bezier(.23, 1, .32, 1);
+    font-family: 'Basementgrotesque v1', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    margin: 50px 0 0 0;
+    width: 280px;
+}
+
+section.about div.content > div.row > div a:hover {
+  background-color: #5c24fb;
+}
+
+section.about div.content > div.row:last-child {
+  margin: 0;
+}
+
+section.about div.content > div.row img {
+  /* width: 496px; */
+
+  max-width: 640px;
+  width: 100%;
+  height: auto;
 }
 
 footer {
@@ -981,7 +1075,8 @@ footer div.copyrights p {
     height: auto;
   }
 
-  section.navbar div.row.copyrights div:nth-child(2), section.navbar div.row.copyrights div:last-child {
+  section.navbar div.row.copyrights div:nth-child(2),
+  section.navbar div.row.copyrights div:last-child {
     display: none;
   }
 
@@ -1118,6 +1213,55 @@ footer div.copyrights p {
 
   section.call-to-action a {
     width: 100%;
+  }
+
+  section.about {
+    display: block;
+  }
+
+  section.about div.content {
+    position: relative;
+    width: 100%;
+  }
+
+  section.about div.content h1 {
+    font-size: 37px;
+  }
+
+  section.about div.content > div.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0 0 100px 0;
+  }
+
+  section.about div.content > div.row > div {
+    width: 100%;
+  }
+
+  section.about div.content > div.row:last-child {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+
+  section.about div.content > div.row > div a {
+    width: 100%;
+  }
+
+  section.about div.wallpaper {
+    display: grid;
+    place-items: center;
+
+    margin: 0 0 80px 0;
+    width: 100%;
+  }
+
+  section.about div.wallpaper img {
+    max-width: 998px;
+    width: 100%;
+    height: auto;
   }
 
   footer {

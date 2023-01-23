@@ -152,7 +152,7 @@ export default function Navbar() {
 
             <nav>
                 <div className="logo">
-                    <Link href="/" onClick={() => timeline.killAll()}>
+                    <Link href="/" onClick={() => typeof timeline !== 'undefined' ?? timeline.killAll()}>
                         <Image
                             src={logoLargeBlackImage}
                             alt="logo"

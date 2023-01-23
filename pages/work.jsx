@@ -11,7 +11,10 @@ import megtWorkImage from "../static/images/megt-work.webp"
 import montBlancClimateChangeWorkImage from "../static/images/mont-blanc-climate-change-work.webp"
 import cirrusWorkImage from "../static/images/cirrus-work.webp"
 import netalysWorkImage from "../static/images/netalys-work.webp"
+import lightNodeWorkImage from "../static/images/light-node-work.webp"
+import poapWorkImage from "../static/images/poap-work.webp"
 
+import CTA from "./components/CTA"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
@@ -53,10 +56,10 @@ export default function Work() {
                 <div className="row">
                     <div className="left">
                         <WorkElement options={{
-                            icon_url: bbcsLtddWorkImage,
-                            url: 'https://bbcs.netlify.app',
-                            date: 2021,
-                            title: "BBCS & LTDD"
+                            icon_url: lightNodeWorkImage,
+                            url: 'https://medium.com/@stratusagency/stratus-commits-to-the-development-of-web-3-0-677e82406537',
+                            date: 2023,
+                            title: "STRATUS commits to the development of Web 3.0"
                         }} />
 
                         <WorkElement options={{
@@ -72,9 +75,23 @@ export default function Work() {
                             date: 2022,
                             title: "NETALYS"
                         }} />
+
+                        <WorkElement options={{
+                            icon_url: bbcsLtddWorkImage,
+                            url: 'https://bbcs.netlify.app',
+                            date: 2021,
+                            title: "BBCS & LTDD"
+                        }} />
                     </div>
 
                     <div className="right">
+                        <WorkElement options={{
+                            icon_url: poapWorkImage,
+                            url: 'https://app.poap.xyz/token/6246968',
+                            date: 2022,
+                            title: "Ethereum documentation POAP"
+                        }} />
+
                         <WorkElement options={{
                             icon_url: megtWorkImage,
                             url: 'https://megt.io',
@@ -98,6 +115,8 @@ export default function Work() {
                     </div>
                 </div>
             </section>
+
+            <CTA />
 
             <Footer />
         </>

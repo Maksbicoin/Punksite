@@ -24,7 +24,7 @@ export default function Footer(options) {
                             height={50}
                         />
 
-                        <p>Metaverse, Blockchain and Web 3.0 Solutions Provider. Trusted by Metaverse GT.</p>
+                        <p>STRATUS is a leading Blockchain, Crypto, NFT & Web 3.0 PR provider. Committed as ETH validator, ETH & Solidity document official translator. Trusted by Metaverse GT.</p>
 
                         <div className="social-wrap">
                             <a href="https://www.linkedin.com/company/stratusagency" target="_blank" rel="noopener noreferrer">
@@ -45,6 +45,15 @@ export default function Footer(options) {
                                 />
                             </a>
 
+                            <a href="https://t.me/+iFQ04zUAstJlZmI8" target="_blank" rel="noopener noreferrer">
+                                <Image
+                                    src={telegramImage}
+                                    alt=""
+                                    width={16}
+                                    height={17}
+                                />
+                            </a>
+
                             <a href="https://github.com/stratusagency" target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src={gitHubImage}
@@ -57,15 +66,6 @@ export default function Footer(options) {
                             <a href="https://twitter.com/stratusagency" target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src={twitterImage}
-                                    alt=""
-                                    width={16}
-                                    height={17}
-                                />
-                            </a>
-
-                            <a href="https://t.me/+iFQ04zUAstJlZmI8" target="_blank" rel="noopener noreferrer">
-                                <Image
-                                    src={telegramImage}
                                     alt=""
                                     width={16}
                                     height={17}

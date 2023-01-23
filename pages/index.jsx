@@ -24,6 +24,8 @@ import netalysWorkImage from "../static/images/netalys-work.webp"
 import launcherAutoImage from "../static/images/launcher-auto.webp"
 import lightNodeImage from "../static/images/light-node.webp"
 import lightNodeWorkImage from "../static/images/light-node-work.webp"
+import poapImage from "../static/images/poap.webp"
+import poapWorkImage from "../static/images/poap-work.webp"
 
 import iconBlackImage from "../static/images/icon-black.webp"
 import questionImage from "../static/images/question.webp"
@@ -35,6 +37,7 @@ import starsImage from "../static/images/stars.webp"
 // import pricingIcon from "../static/images/pricing_icon.svg"
 
 import Navbar from "./components/Navbar"
+import CTA from "./components/CTA"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -234,7 +237,7 @@ export default function App() {
 
 			<section className="portfolio">
 				<div className="left">
-					<PortfolioImagesColumn list={[solidityDocsImage, bbcsLtddImage, peer3Image]} />
+					<PortfolioImagesColumn list={[solidityDocsImage, poapImage, peer3Image]} />
 				</div>
 
 				<div className="center">
@@ -242,7 +245,7 @@ export default function App() {
 				</div>
 
 				<div className="right">
-					<PortfolioImagesColumn list={[cirrusImage, lightNodeImage, launcherAutoImage]} />
+					<PortfolioImagesColumn list={[cirrusImage, lightNodeImage, bbcsLtddImage]} />
 				</div>
 			</section>
 
@@ -338,6 +341,13 @@ export default function App() {
 							url: 'https://docs.soliditylang.org/fr/v0.8.11/',
 							date: 2022,
 							title: "SOLIDITY DOCUMENTATION"
+						}} />
+
+						<WorkElement options={{
+							icon_url: poapWorkImage,
+							url: 'https://app.poap.xyz/token/6246968',
+							date: 2022,
+							title: "Ethereum documentation POAP"
 						}} />
 
 						<WorkElement options={{
@@ -684,15 +694,7 @@ export default function App() {
 				</div>
 			</section>
 
-			<section className="call-to-action">
-				<h2>discover without limits start your project now</h2>
-
-				<a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer">
-					SCHEDULE A CALL
-				</a>
-
-				<div className="background"></div>
-			</section>
+			<CTA />
 
 			<Footer timeline={timeline} />
 		</>
