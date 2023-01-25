@@ -9,108 +9,108 @@ import navbarImage from "../../static/images/navbar-image.webp"
 import logoLargeBlackImage from "../../static/images/logo-large-black.svg"
 import hamburgerIcon from "../../static/images/hamburger-icon.svg"
 
-export default function Navbar() {
+export default function Navbar({ isFR }) {
     const hamburgerButtonRef = useRef();
 
     const buttonsArray = [{
-        name: 'home',
-        href: '/'
+        name: isFR ? "accueil" : "home",
+        href: isFR ? "/fr.html" : "/"
     }, {
-        name: 'work',
-        href: '/work.html'
+        name: isFR ? "portfolio" : "work",
+        href: isFR ? "/fr/portfolio.html" : "/work.html"
     }, {
-        name: 'about',
-        href: '/about.html'
+        name: isFR ? "a propos" : "about",
+        href: isFR ? "/fr/a-propos.html" : "/about.html"
     }, {
-        name: 'contact',
-        href: 'https://calendly.com/stratus_agency/meet'
+        name: "contact",
+        href: "https://calendly.com/stratus_agency/meet"
     }]
 
     const handleNavbar = e => {
         e.preventDefault();
 
-        if (document.querySelector('section.navbar').classList.contains('show')) {
+        if (document.querySelector("section.navbar").classList.contains("show")) {
             // handle hide
             const timeline = gsap.timeline();
 
-            timeline.to('section.navbar div.element a', {
-                y: '100%',
-                ease: 'power4.out',
+            timeline.to("section.navbar div.element a", {
+                y: "100%",
+                ease: "power4.out",
                 duration: 0.8,
                 stagger: 0.1,
             }, 0);
 
-            timeline.to('section.navbar p', {
-                y: '100%',
-                ease: 'power4.out',
+            timeline.to("section.navbar p", {
+                y: "100%",
+                ease: "power4.out",
                 duration: 0.4,
                 stagger: 0.1,
             }, 0);
 
-            timeline.to('section.navbar hr', {
-                width: '0',
-                ease: 'power4.out',
+            timeline.to("section.navbar hr", {
+                width: "0",
+                ease: "power4.out",
                 duration: 0.8,
                 stagger: 0.1,
             }, 0);
 
-            timeline.to('section.navbar img', {
-                height: '0%',
-                ease: 'power4.out',
+            timeline.to("section.navbar img", {
+                height: "0%",
+                ease: "power4.out",
                 duration: 0.8,
             }, 0.4);
 
-            timeline.to('section.navbar', {
-                y: '-100vh',
-                ease: 'power4.inOut',
+            timeline.to("section.navbar", {
+                y: "-100vh",
+                ease: "power4.inOut",
                 duration: 1,
                 onComplete: () => {
-                    document.querySelector('section.navbar').classList.remove('show');
-                    document.querySelector('section.navbar img').style.height = '0';
-                    document.querySelector('section.navbar div.gray-divider').style.height = '0';
-                    document.querySelectorAll('section.navbar div.links a').forEach(element => element.style.transform = 'translateY(-100%)');
+                    document.querySelector("section.navbar").classList.remove("show");
+                    document.querySelector("section.navbar img").style.height = "0";
+                    document.querySelector("section.navbar div.gray-divider").style.height = "0";
+                    document.querySelectorAll("section.navbar div.links a").forEach(element => element.style.transform = "translateY(-100%)");
                 }
             }, 0.6);
         } else {
             // handle show
             const timeline = gsap.timeline();
 
-            timeline.to('section.navbar', {
+            timeline.to("section.navbar", {
                 y: 0,
-                ease: 'power4.out',
+                ease: "power4.out",
                 duration: 1,
-                onComplete: () => document.querySelector('section.navbar').classList.add('show')
+                onComplete: () => document.querySelector("section.navbar").classList.add("show")
             }, 0);
 
-            timeline.to('section.navbar div.links a', {
+            timeline.to("section.navbar div.links a", {
                 y: 0,
                 duration: 0.8,
-                ease: 'power3.out',
+                ease: "power3.out",
                 stagger: 0.1
             }, 0.1);
 
-            timeline.to('section.navbar hr', {
-                width: '100%',
-                ease: 'power4.out',
+            timeline.to("section.navbar hr", {
+                width: "100%",
+                ease: "power4.out",
                 duration: 0.8,
                 stagger: 0.1,
             }, 0.1);
 
-            timeline.to('section.navbar img', {
-                height: '100%',
-                ease: 'power4.out',
+            timeline.to("section.navbar img", {
+                height: "100%",
+                ease: "power4.out",
                 duration: 0.8,
             }, 0.4);
 
-            timeline.to('section.navbar div.gray-divider', {
-                height: '100vh',
-                ease: 'power4.out',
+            timeline.to("section.navbar div.gray-divider", {
+                height: "100vh",
+                ease: "power4.out",
                 duration: 0.8,
             }, 0.6);
 
-            timeline.to('section.navbar p', {
+            timeline.to("section.navbar p", {
                 y: 0,
-                ease: 'power4.out',
+                ease: "power4.out",
                 duration: 0.4,
                 stagger: 0.1,
             }, 0.6);
@@ -152,7 +152,7 @@ export default function Navbar() {
 
             <nav>
                 <div className="logo">
-                    <Link href="/" onClick={() => typeof timeline !== 'undefined' ?? timeline.killAll()}>
+                    <Link href={isFR ? "/fr.html" : "/"} onClick={() => typeof timeline !== "undefined" ?? timeline.killAll()}>
                         <Image
                             src={logoLargeBlackImage}
                             alt="logo"
@@ -162,7 +162,7 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                <h2>WE BRING YOU TO WEB 3.0</h2>
+                <h2>{isFR ? "Nous vous amenons dans le Web 3.0" : "WE BRING YOU TO WEB 3.0"}</h2>
 
                 <div className="hamburger">
                     <button onClick={handleNavbar} ref={hamburgerButtonRef}>
@@ -182,7 +182,7 @@ export default function Navbar() {
 const ButtonElement = ({ options }) => {
     return (
         <div className="element">
-            {options.href.startsWith('http') ? <a href={options.href} target="_blank" rel="noopener noreferrer">
+            {options.href.startsWith("http") ? <a href={options.href} target="_blank" rel="noopener noreferrer">
                 {options.name}
             </a> : <Link href={options.href}>
                 {options.name}

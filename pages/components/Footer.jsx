@@ -9,9 +9,7 @@ import telegramImage from "../../static/images/telegram.svg"
 import linkedinImage from "../../static/images/linkedin.png"
 import mediumImage from "../../static/images/medium.svg"
 
-export default function Footer(options) {
-    const tl = options.timeline;
-
+export default function Footer({ isFR, timeline }) {
     return (
         <footer>
             <div className="row">
@@ -24,7 +22,13 @@ export default function Footer(options) {
                             height={50}
                         />
 
-                        <p>STRATUS is a leading Blockchain, Crypto, NFT & Web 3.0 PR provider. Committed as ETH validator, ETH & Solidity document official translator. Trusted by Metaverse GT.</p>
+                        <p>
+                            {isFR ? `STRATUS est un fournisseur de RP de premier plan dans la Blockchain, les Crypto-monnaies, les NFT et le Web 3.0.
+                                Engagé comme validateur ETH, traducteur officiel des documentations ETH & Solidity. Metaverse GT nous a fait confiance.`
+
+                                : `STRATUS is a leading Blockchain, Crypto, NFT & Web 3.0 PR provider. Committed as ETH validator, ETH & Solidity document official translator.
+                                Trusted by Metaverse GT.`}
+                        </p>
 
                         <div className="social-wrap">
                             <a href="https://www.linkedin.com/company/stratusagency" target="_blank" rel="noopener noreferrer">
@@ -88,19 +92,19 @@ export default function Footer(options) {
                     <h2>PAGES</h2>
 
                     <div className="list">
-                        <Link href="/" onClick={() => tl ? tl.killAll() : undefined}>Home</Link>
-                        <Link href="/work.html" onClick={() => tl ? tl.killAll() : undefined}>Work</Link>
-                        <Link href="/about.html" onClick={() => tl ? tl.killAll() : undefined}>About</Link>
-                        <Link href="/contact.html" onClick={() => tl ? tl.killAll() : undefined}>Contact</Link>
+                        <Link href={`/${isFR ? "fr/" : ""}`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "Accueil" : "Home"}</Link>
+                        <Link href={`/${isFR ? "fr/portfolio" : "work"}.html`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "Portfolio" : "Work"}</Link>
+                        <Link href={`/${isFR ? "fr/a-propos" : "about"}.html`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "A propos" : "About"}</Link>
+                        <a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer">Contact</a>
                     </div>
                 </div>
 
                 <div className="column utility">
-                    <h2>LEGALS</h2>
+                    <h2>{isFR ? "LÉGAL" : "LEGALS"}</h2>
 
                     <div className="list">
-                        {/* <Link href="/rgpd" onClick={() => tl ? tl.killAll() : undefined}>RGPD</Link> */}
-                        <Link href="/legal.html" onClick={() => tl ? tl.killAll() : undefined}>Legal</Link>
+                        {/* <Link href="/rgpd" onClick={() => timeline ? timeline.killAll() : undefined}>RGPD</Link> */}
+                        <Link href={`/${isFR ? "fr/" : ""}legal.html`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "Légal" : "Legal"}</Link>
                     </div>
                 </div>
             </div>
@@ -111,7 +115,7 @@ export default function Footer(options) {
                 <div></div>
 
                 <a href="https://www.leonardomattar.com/" rel="nopenner noreferrer" target="_blank">
-                    <p>© Template by Leonardo Mattar</p>
+                    <p>© Modèle Web {isFR ? "par" : "by"} Leonardo Mattar</p>
                 </a>
             </div>
         </footer>

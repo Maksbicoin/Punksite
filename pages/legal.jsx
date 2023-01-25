@@ -3,29 +3,27 @@ import Head from "next/head"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 
-export default function Legal() {
+export default function Legal({ isFR }) {
     return (
         <>
             <Head>
-                <title>STRATUS - Legal</title>
+                <title>STRATUS - {isFR ? "Légal" : "Legal"}</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 
-            <Navbar />
+            <Navbar isFR={isFR} />
 
             <section className="legal">
                 <div className="content">
-                    <h2>Legal</h2>
+                    <h2>{isFR ? "Légal" : "Legal"}</h2>
 
-                    <strong>
-                        <p>SIRET number: 910 368 919 00015</p>
-                    </strong>
-                    <p>Mockups are made by <a href="https://www.anthonyboyd.graphics/" target="_blank" rel="noopener noreferrer">Anthony Boyd</a>.</p>
-                    <p>Web template is made by <a href="https://www.leonardomattar.com/" target="_blank" rel="noopener noreferrer">Leonardo Mattar</a></p>
+                    <p>{isFR ? "Siret" : "Siret number"} : 910 368 919 00015</p>
+                    <p>{isFR ? "Les mockups sont faites par" : "Mockups are made by"} <a href="https://www.anthonyboyd.graphics/" target="_blank" rel="noopener noreferrer"><u>Anthony Boyd</u></a>.</p>
+                    <p>{isFR ? "Le modèle Web est réalisé par" : "Web template is made by"} <a href="https://www.leonardomattar.com/" target="_blank" rel="noopener noreferrer"><u>Leonardo Mattar</u></a>.</p>
                 </div>
             </section>
 
-            <Footer />
+            <Footer isFR={isFR} />
         </>
     )
 }

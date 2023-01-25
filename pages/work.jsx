@@ -18,7 +18,7 @@ import CTA from "./components/CTA"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
-export default function Work() {
+export default function Work({ isFR }) {
     useEffect(() => {
         const buttonsProjects = document.querySelectorAll('section.work div.element div.project-hover')
 
@@ -41,16 +41,16 @@ export default function Work() {
     return (
         <>
             <Head>
-                <title>STRATUS - Work</title>
+                <title>STRATUS - {isFR ? "Portfolio" : "Work"}</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 
-            <Navbar />
+            <Navbar isFR={isFR} />
 
             <section className="work page">
                 <div className="titles">
-                    <h2>RECENT WORK</h2>
-                    <h3>COMPLETED PROJECTS</h3>
+                    <h2>{isFR ? "TRAVAIL RÉCENT" : "RECENT WORK"}</h2>
+                    <h3>{isFR ? "PROJETS ACCOMPLIS" : "COMPLETED PROJECTS"}</h3>
                 </div>
 
                 <div className="row">
@@ -59,44 +59,7 @@ export default function Work() {
                             icon_url: lightNodeWorkImage,
                             url: 'https://medium.com/@stratusagency/stratus-commits-to-the-development-of-web-3-0-677e82406537',
                             date: 2023,
-                            title: "STRATUS commits to the development of Web 3.0"
-                        }} />
-
-                        <WorkElement options={{
-                            icon_url: montBlancClimateChangeWorkImage,
-                            url: 'https://mont-blanc-climate-change.netlify.app',
-                            date: 2022,
-                            title: "MONT BLANC — CLIMATE CHANGE"
-                        }} />
-
-                        <WorkElement options={{
-                            icon_url: netalysWorkImage,
-                            url: 'https://netalys-hexagon.netlify.app/',
-                            date: 2022,
-                            title: "NETALYS"
-                        }} />
-
-                        <WorkElement options={{
-                            icon_url: bbcsLtddWorkImage,
-                            url: 'https://bbcs.netlify.app',
-                            date: 2021,
-                            title: "BBCS & LTDD"
-                        }} />
-                    </div>
-
-                    <div className="right">
-                        <WorkElement options={{
-                            icon_url: poapWorkImage,
-                            url: 'https://app.poap.xyz/token/6246968',
-                            date: 2022,
-                            title: "Ethereum documentation POAP"
-                        }} />
-
-                        <WorkElement options={{
-                            icon_url: megtWorkImage,
-                            url: 'https://megt.io',
-                            date: 2022,
-                            title: "METAVERSE GT"
+                            title: isFR ? "STRATUS s'engage dans le développement du Web 3.0" : "STRATUS commits to the development of Web 3.0"
                         }} />
 
                         <WorkElement options={{
@@ -107,18 +70,55 @@ export default function Work() {
                         }} />
 
                         <WorkElement options={{
+                            icon_url: montBlancClimateChangeWorkImage,
+                            url: 'https://mont-blanc-climate-change.netlify.app',
+                            date: 2022,
+                            title: isFR ? "MONT BLANC — CHANGEMENT CLIMATIQUE" : "MONT BLANC — CLIMATE CHANGE"
+                        }} />
+
+                        <WorkElement options={{
+                            icon_url: netalysWorkImage,
+                            url: 'https://netalys-hexagon.netlify.app/',
+                            date: 2022,
+                            title: "NETALYS"
+                        }} />
+                    </div>
+
+                    <div className="right">
+                        <WorkElement options={{
+                            icon_url: megtWorkImage,
+                            url: 'https://megt.io',
+                            date: 2022,
+                            title: "METAVERSE GT"
+                        }} />
+
+                        <WorkElement options={{
                             icon_url: solidityDocsWorkImage,
                             url: 'https://docs.soliditylang.org/fr/v0.8.11/',
                             date: 2022,
-                            title: "SOLIDITY DOCUMENTATION"
+                            title: isFR ? "DOCUMENTATION DE SOLIDITY" : "SOLIDITY DOCUMENTATION"
+                        }} />
+
+                        <WorkElement options={{
+                            icon_url: poapWorkImage,
+                            url: 'https://app.poap.xyz/token/6246968',
+                            date: 2022,
+                            title: isFR ? "DOCUMENTATION D'ETHEREUM" : "ETHEREUM DOCUMENTATION"
+                        }} />
+
+                        <WorkElement options={{
+                            icon_url: bbcsLtddWorkImage,
+                            url: 'https://bbcs.netlify.app',
+                            date: 2021,
+                            title: "BBCS & LTDD"
                         }} />
                     </div>
                 </div>
             </section>
 
-            <CTA />
+            <CTA isFR={isFR} />
 
-            <Footer />
+            <Footer isFR={isFR} />
         </>
     )
 }
