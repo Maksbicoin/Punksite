@@ -17,7 +17,7 @@ export default function About({ isFR }) {
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 
-            <Navbar />
+            <Navbar isFR={isFR} />
 
             <section className="about">
                 <div className="content">
