@@ -47,42 +47,20 @@ export default function App({ isFR = false }) {
 
 	useEffect(() => {
 		if (!load) {
-			// Create array of elements to tween on
-			const boxesTop = gsap.utils.toArray(".track-wrap.top .element");
-
-			// Setup the tween
-			const loopTop = horizontalLoop(boxesTop, {
-				paused: false, // Sets the tween to be paused initially
-				repeat: -1 // Makes sure the tween runs infinitely
-			});
-
-			// Start the tween
-			loopTop.play() // Call to start playing the tween
-
-			// ScrollTrigger set up for the whole duration of the body's scroll
-			ScrollTrigger.create({
-				start: 0,
-				end: 'max',
-				// pin: '.container',
-				onUpdate: () => loopTop.timeScale(1)
-			})
-
-			// -------------------------------------------------------------------------------------------------------------------------------------
-
 			/*
-			This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
-			
-			Features:
-			 - Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
-			 - When each item animates to the left or right enough, it will loop back to the other side
-			 - Optionally pass in a config object with values like "speed" (default: 1, which travels at roughly 100 pixels per second), paused (boolean),  repeat, reversed, and paddingRight.
-			 - The returned timeline will have the following methods added to it:
-			   - next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-			   - previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-			   - toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
-			   - current() - returns the current index (if an animation is in-progress, it reflects the final index)
-			   - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
-			 */
+		This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
+
+		Features:
+		- Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
+		- When each item animates to the left or right enough, it will loop back to the other side
+		- Optionally pass in a config object with values like "speed" (default: 1, which travels at roughly 100 pixels per second), paused (boolean),  repeat, reversed, and paddingRight.
+		- The returned timeline will have the following methods added to it:
+		- next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
+		- previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
+		- toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
+		- current() - returns the current index (if an animation is in-progress, it reflects the final index)
+		- times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
+		*/
 			function horizontalLoop(items, config) {
 				items = gsap.utils.toArray(items);
 				config = config || {};
@@ -140,6 +118,9 @@ export default function App({ isFR = false }) {
 				}
 				return tl;
 			}
+
+			const elementes = document.querySelectorAll('.track-wrap > .element');
+			horizontalLoop(elementes, { paused: false, repeat: -1 })
 
 			/**
 			 * TIMELINE PORTFOLIO
@@ -361,7 +342,87 @@ export default function App({ isFR = false }) {
 			</section>
 
 			<section className="track">
-				<div className="track-wrap top">
+				<div class="track-wrap">
+					<div class="element">
+						<Image
+							src={iconBlackImage}
+							alt=""
+							width={36}
+							height={36}
+						/>
+					</div>
+
+					<div class="element">
+						<span>WEB 3.0</span>
+					</div>
+
+					<div class="element">
+						<Image
+							src={iconBlackImage}
+							alt=""
+							width={36}
+							height={36}
+						/>
+					</div>
+
+					<div class="element">
+						<span>METAMASK</span>
+					</div>
+
+					<div class="element">
+						<Image
+							src={iconBlackImage}
+							alt=""
+							width={36}
+							height={36}
+						/>
+					</div>
+
+					<div class="element">
+						<span>INFURA</span>
+					</div>
+
+					<div class="element">
+						<Image
+							src={iconBlackImage}
+							alt=""
+							width={36}
+							height={36}
+						/>
+					</div>
+
+					<div class="element">
+						<span>MORALIS</span>
+					</div>
+
+					<div class="element">
+						<Image
+							src={iconBlackImage}
+							alt=""
+							width={36}
+							height={36}
+						/>
+					</div>
+
+					<div class="element">
+						<span>DEFI</span>
+					</div>
+
+					<div class="element">
+						<Image
+							src={iconBlackImage}
+							alt=""
+							width={36}
+							height={36}
+						/>
+					</div>
+
+					<div class="element">
+						<span>ETHEREUM</span>
+					</div>
+				</div>
+
+				{/* <div className="track-wrap top">
 					<div className="element">
 						<span>WEB 3.0</span>
 
@@ -438,7 +499,7 @@ export default function App({ isFR = false }) {
 							height={36}
 						/>
 					</div>
-				</div>
+				</div> */}
 			</section>
 
 
@@ -459,13 +520,13 @@ export default function App({ isFR = false }) {
 					<div className="services-item">
 						<span>{isFR ? "analyse des EIP" : "EIP analysis"}</span>
 						<span>{isFR ? "validateur ETH" : "ETH validator"}</span>
-						<span>{isFR ? "platformes" : "platforms"}</span>
-						<span>{isFR ? "développement" : "development"}</span>
+						<span>DeFi</span>
 						<span>PoS & PoW</span>
+						<span>{isFR ? "platformes" : "platforms"}</span>
 					</div>
 
 					<div className="services-item">
-						<span>{isFR ? "programmation" : "programming"}</span>
+						<span>{isFR ? "développement" : "development"}</span>
 						<span>performance</span>
 						<span>branding</span>
 						<span>marketing</span>
