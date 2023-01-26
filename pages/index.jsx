@@ -48,19 +48,19 @@ export default function App({ isFR = false }) {
 	useEffect(() => {
 		if (!load) {
 			/*
-		This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
+			This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
 
-		Features:
-		- Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
-		- When each item animates to the left or right enough, it will loop back to the other side
-		- Optionally pass in a config object with values like "speed" (default: 1, which travels at roughly 100 pixels per second), paused (boolean),  repeat, reversed, and paddingRight.
-		- The returned timeline will have the following methods added to it:
-		- next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-		- previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-		- toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
-		- current() - returns the current index (if an animation is in-progress, it reflects the final index)
-		- times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
-		*/
+			Features:
+			- Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
+			- When each item animates to the left or right enough, it will loop back to the other side
+			- Optionally pass in a config object with values like "speed" (default: 1, which travels at roughly 100 pixels per second), paused (boolean),  repeat, reversed, and paddingRight.
+			- The returned timeline will have the following methods added to it:
+			- next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
+			- previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
+			- toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
+			- current() - returns the current index (if an animation is in-progress, it reflects the final index)
+			- times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
+			*/
 			function horizontalLoop(items, config) {
 				items = gsap.utils.toArray(items);
 				config = config || {};
@@ -421,85 +421,6 @@ export default function App({ isFR = false }) {
 						<span>ETHEREUM</span>
 					</div>
 				</div>
-
-				{/* <div className="track-wrap top">
-					<div className="element">
-						<span>WEB 3.0</span>
-
-						<Image
-							src={iconBlackImage}
-							alt=""
-							width={36}
-							height={36}
-						/>
-					</div>
-
-					<div className="element">
-						<span>METAMASK</span>
-
-						<Image
-							src={iconBlackImage}
-							alt=""
-							width={36}
-							height={36}
-						/>
-					</div>
-
-					<div className="element">
-						<span>INFURA</span>
-
-						<Image
-							src={iconBlackImage}
-							alt=""
-							width={36}
-							height={36}
-						/>
-					</div>
-
-					<div className="element">
-						<span>SOLIDITY</span>
-
-						<Image
-							src={iconBlackImage}
-							alt=""
-							width={36}
-							height={36}
-						/>
-					</div>
-
-					<div className="element">
-						<span>MORALIS</span>
-
-						<Image
-							src={iconBlackImage}
-							alt=""
-							width={36}
-							height={36}
-						/>
-					</div>
-
-					<div className="element">
-						<span>BLOCKCHAIN</span>
-
-						<Image
-							src={iconBlackImage}
-							alt=""
-							width={36}
-							height={36}
-						/>
-					</div>
-
-					<div className="element">
-						<span>ETHEREUM</span>
-
-						<Image
-							src={iconBlackImage}
-							alt=""
-							width={36}
-							height={36}
-						/>
-					</div>
-				</div> */}
 			</section>
 
 
