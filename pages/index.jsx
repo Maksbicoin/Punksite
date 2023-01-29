@@ -21,11 +21,11 @@ import cirrusImage from "../static/images/cirrus.webp"
 import cirrusWorkImage from "../static/images/cirrus-work.webp"
 import netalysImage from "../static/images/netalys.webp"
 import netalysWorkImage from "../static/images/netalys-work.webp"
-import launcherAutoImage from "../static/images/launcher-auto.webp"
 import lightNodeImage from "../static/images/light-node.webp"
 import lightNodeWorkImage from "../static/images/light-node-work.webp"
 import poapImage from "../static/images/poap.webp"
 import poapWorkImage from "../static/images/poap-work.webp"
+import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
 
 import iconBlackImage from "../static/images/icon-black.webp"
 import questionImage from "../static/images/question.webp"
@@ -34,7 +34,6 @@ import computerImage from "../static/images/computer.webp"
 import handShakeImage from "../static/images/hand-shake.webp"
 import heartImage from "../static/images/heart.webp"
 import starsImage from "../static/images/stars.webp"
-// import pricingIcon from "../static/images/pricing_icon.svg"
 
 import Navbar from "./components/Navbar"
 import CTA from "./components/CTA"
@@ -288,6 +287,13 @@ export default function App({ isFR = false }) {
 						}} />
 
 						<WorkElement options={{
+							icon_url: megtWorkImage,
+							url: 'https://megt.io',
+							date: 2022,
+							title: "METAVERSE GT"
+						}} />
+
+						<WorkElement options={{
 							icon_url: cirrusWorkImage,
 							url: 'https://cirrus.stratusagency.io',
 							date: 2022,
@@ -300,21 +306,14 @@ export default function App({ isFR = false }) {
 							date: 2022,
 							title: isFR ? "MONT BLANC — CHANGEMENT CLIMATIQUE" : "MONT BLANC — CLIMATE CHANGE"
 						}} />
-
-						<WorkElement options={{
-							icon_url: netalysWorkImage,
-							url: 'https://netalys-hexagon.netlify.app/',
-							date: 2022,
-							title: "NETALYS"
-						}} />
 					</div>
 
 					<div className="right">
 						<WorkElement options={{
-							icon_url: megtWorkImage,
-							url: 'https://megt.io',
-							date: 2022,
-							title: "METAVERSE GT"
+							icon_url: meetupLyonWorkImage,
+							url: 'https://www.linkedin.com/company/meetup-lyon/',
+							date: 2023,
+							title: "STRATUS X MEETUP LYON"
 						}} />
 
 						<WorkElement options={{
@@ -332,10 +331,10 @@ export default function App({ isFR = false }) {
 						}} />
 
 						<WorkElement options={{
-							icon_url: bbcsLtddWorkImage,
-							url: 'https://bbcs.netlify.app',
-							date: 2021,
-							title: "BBCS & LTDD"
+							icon_url: netalysWorkImage,
+							url: 'https://netalys-hexagon.netlify.app/',
+							date: 2022,
+							title: "NETALYS"
 						}} />
 					</div>
 				</div>
@@ -455,200 +454,6 @@ export default function App({ isFR = false }) {
 					</div>
 				</div>
 			</section>
-			{/* 
-			<section className="pricing">
-				<div className="headline">
-					<h3>No surprises. No hassles. Just right.</h3>
-					<h2>Services & Pricing</h2>
-				</div>
-
-				<div className="row">
-					<div className="element">
-						<h3>Branding</h3>
-
-						<p>Bring your brand to life with a refreshing logo, style guide and more.</p>
-
-						<span className="price">$4,950</span>
-
-						<p>Branding includes:</p>
-
-						<ul>
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Branding book</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Visual identity</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Content strategy</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Social media</p>
-								</div>
-							</li>
-						</ul>
-						<a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer">GET STARTED</a>
-					</div>
-
-					<div className="element">
-						<span className="popular">Popular</span>
-
-						<h3>Website</h3>
-
-						<p>Premium website design and professional Webflow development.</p>
-
-						<span className="price">$9,950</span>
-
-						<p>Everything in Branding, plus:</p>
-
-						<ul>
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Up to 5 Pages with animations</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Design system in Webflow</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>2 weeks of QA</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Responsive for mobile devices</p>
-								</div>
-							</li>
-						</ul>
-						<a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer">GET STARTED</a>
-					</div>
-
-					<div className="element">
-						<h3>Enterprise</h3>
-
-						<p>For companies that need real-time communication and unlimited requests.</p>
-
-						<span className="price">Custom</span>
-
-						<p>Everything in Website, plus:</p>
-
-						<ul>
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Private slack</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Unlimited requests</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>Support priority</p>
-								</div>
-							</li>
-
-							<li>
-								<div className="row">
-									<Image
-										src={pricingIcon}
-										priority
-										alt="icon"
-									/>
-
-									<p>SEO optimization</p>
-								</div>
-							</li>
-						</ul>
-						<a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer" className="custom">CONTACT SALES</a>
-					</div>
-				</div>
-			</section> */}
 
 			<section className="qa">
 				<h2>{isFR ? "QUESTIONS FRÉQUEMMENT POSÉES" : "FREQUENTLY ASKED QUESTIONS"}</h2>

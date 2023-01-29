@@ -13,6 +13,7 @@ import cirrusWorkImage from "../static/images/cirrus-work.webp"
 import netalysWorkImage from "../static/images/netalys-work.webp"
 import lightNodeWorkImage from "../static/images/light-node-work.webp"
 import poapWorkImage from "../static/images/poap-work.webp"
+import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
 
 import CTA from "./components/CTA"
 import Navbar from "./components/Navbar"
@@ -63,6 +64,13 @@ export default function Work({ isFR }) {
                         }} />
 
                         <WorkElement options={{
+                            icon_url: megtWorkImage,
+                            url: 'https://megt.io',
+                            date: 2022,
+                            title: "METAVERSE GT"
+                        }} />
+
+                        <WorkElement options={{
                             icon_url: cirrusWorkImage,
                             url: 'https://cirrus.stratusagency.io',
                             date: 2022,
@@ -77,19 +85,19 @@ export default function Work({ isFR }) {
                         }} />
 
                         <WorkElement options={{
-                            icon_url: netalysWorkImage,
-                            url: 'https://netalys-hexagon.netlify.app/',
-                            date: 2022,
-                            title: "NETALYS"
+                            icon_url: bbcsLtddWorkImage,
+                            url: 'https://bbcs.netlify.app',
+                            date: 2021,
+                            title: "BBCS & LTDD"
                         }} />
                     </div>
 
                     <div className="right">
                         <WorkElement options={{
-                            icon_url: megtWorkImage,
-                            url: 'https://megt.io',
-                            date: 2022,
-                            title: "METAVERSE GT"
+                            icon_url: meetupLyonWorkImage,
+                            url: 'https://www.linkedin.com/company/meetup-lyon/',
+                            date: 2023,
+                            title: "Exploring the Future of Web 3.0 with STRATUS"
                         }} />
 
                         <WorkElement options={{
@@ -107,10 +115,10 @@ export default function Work({ isFR }) {
                         }} />
 
                         <WorkElement options={{
-                            icon_url: bbcsLtddWorkImage,
-                            url: 'https://bbcs.netlify.app',
-                            date: 2021,
-                            title: "BBCS & LTDD"
+                            icon_url: netalysWorkImage,
+                            url: 'https://netalys-hexagon.netlify.app/',
+                            date: 2022,
+                            title: "NETALYS"
                         }} />
                     </div>
                 </div>
