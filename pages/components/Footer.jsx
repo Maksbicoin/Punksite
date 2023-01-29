@@ -115,7 +115,7 @@ export default function Footer({ isFR, timeline }) {
                 <div></div>
 
                 <a href="https://www.leonardomattar.com/" rel="nopenner noreferrer" target="_blank">
-                    <p>© Modèle Web {isFR ? "par" : "by"} Leonardo Mattar</p>
+                    <p>© Template {isFR ? "par" : "by"} Leonardo Mattar</p>
                 </a>
             </div>
         </footer>
