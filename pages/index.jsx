@@ -230,7 +230,7 @@ export default function App({ isFR = false }) {
 			</section>
 
 			<section className="values">
-				<h2>{isFR ? "La première agence Web 3.0 basée en France, spécialisée dans la production d'outils de communication futuristes." : "The leading web 3.0 agency based in france focused on producing pieces of futuristic communication and tools"}</h2>
+				<h2>{isFR ? "La première agence Web 3.0 basée en France, spécialisée dans la production d'outils de communication futuristes." : "The leading web 3.0 agency labelled French Tech Community based in France, focused on producing pieces of futuristic communication and tools."}</h2>
 
 				<div className="values-container">
 					<ValueElement options={{
