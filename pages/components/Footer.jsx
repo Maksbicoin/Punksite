@@ -8,6 +8,7 @@ import twitterImage from "../../static/images/twitter.svg"
 import telegramImage from "../../static/images/telegram.svg"
 import linkedinImage from "../../static/images/linkedin.png"
 import mediumImage from "../../static/images/medium.svg"
+import laFrenchTechImage from "../../static/images/lafrenchtech.webp"
 
 export default function Footer({ isFR, timeline }) {
     return (
@@ -86,6 +87,14 @@ export default function Footer({ isFR, timeline }) {
                             </a>
                         </div>
                     </div>
+
+                    <a href="https://region-aura.latribune.fr/innovation/2023-02-02/french-tech-mont-blanc-une-nouvelle-communaute-labellisee-au-pied-du-glacier-des-alpes-950179.html" target="_blank" rel="noreferrer">
+                        <Image
+                            src={laFrenchTechImage}
+                            alt="La French Tech Communauté"
+                            width={70}
+                        />
+                    </a>
                 </div>
 
                 <div className="column pages">

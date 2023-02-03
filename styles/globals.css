@@ -928,6 +928,7 @@ footer > div.row:first-child {
 }
 
 footer div.row > div:first-child {
+  flex-direction: column;
   width: 100%;
   max-width: 510px;
 }
@@ -938,6 +939,14 @@ footer div.row > div:first-child img {
 
 footer div.row > div:first-child p {
   margin-bottom: 24px;
+}
+
+footer div.row > div:first-child > a {
+  width: 70px;
+}
+
+footer div.row > div:first-child > a img {
+  margin: 0;
 }
 
 footer div.row > div:first-child div.social-wrap {
