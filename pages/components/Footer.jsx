@@ -25,10 +25,10 @@ export default function Footer({ isFR, timeline }) {
 
                         <p>
                             {isFR ? `STRATUS est un fournisseur de RP de premier plan dans la Blockchain, les Crypto-monnaies, les NFT et le Web 3.0.
-                                Engagé comme validateur ETH, traducteur officiel des documentations ETH & Solidity. Metaverse GT nous a fait confiance.`
+                                Engagé comme validateur ETH, traducteur officiel des documentations Ethereum & Solidity. Incubés à la French Tech Mont-Blanc.`
 
                                 : `STRATUS is a leading Blockchain, Crypto, NFT & Web 3.0 PR provider. Committed as ETH validator, ETH & Solidity document official translator.
-                                Trusted by Metaverse GT.`}
+                                Incubated at La French Tech Mont-Blanc.`}
                         </p>
 
                         <div className="social-wrap">
