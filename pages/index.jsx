@@ -11,7 +11,6 @@ import Footer from "./components/Footer"
 import solidityDocsImage from "../static/images/solidity-docs.webp"
 import solidityDocsWorkImage from "../static/images/solidity-docs-work.webp"
 import bbcsLtddImage from "../static/images/bbcs-ltdd.webp"
-import bbcsLtddWorkImage from "../static/images/bbcs-ltdd-work.webp"
 import peer3Image from "../static/images/peer3.webp"
 import megtImage from "../static/images/megt.webp"
 import megtWorkImage from "../static/images/megt-work.webp"
@@ -19,13 +18,13 @@ import montBlancClimateChangeImage from "../static/images/mont-blanc-climate-cha
 import montBlancClimateChangeWorkImage from "../static/images/mont-blanc-climate-change-work.webp"
 import cirrusImage from "../static/images/cirrus.webp"
 import cirrusWorkImage from "../static/images/cirrus-work.webp"
-import netalysImage from "../static/images/netalys.webp"
-import netalysWorkImage from "../static/images/netalys-work.webp"
 import lightNodeImage from "../static/images/light-node.webp"
 import lightNodeWorkImage from "../static/images/light-node-work.webp"
 import poapImage from "../static/images/poap.webp"
 import poapWorkImage from "../static/images/poap-work.webp"
 import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
+import faucetImage from "../static/images/faucet.webp"
+import faucetWorkImage from "../static/images/faucet-work.webp"
 
 import iconBlackImage from "../static/images/icon-black.webp"
 import questionImage from "../static/images/question.webp"
@@ -221,7 +220,7 @@ export default function App({ isFR = false }) {
 				</div>
 
 				<div className="center">
-					<PortfolioImagesColumn list={[megtImage, netalysImage, montBlancClimateChangeImage]} />
+					<PortfolioImagesColumn list={[megtImage, faucetImage, montBlancClimateChangeImage]} />
 				</div>
 
 				<div className="right">
@@ -280,10 +279,10 @@ export default function App({ isFR = false }) {
 				<div className="row">
 					<div className="left">
 						<WorkElement options={{
-							icon_url: lightNodeWorkImage,
-							url: 'https://medium.com/@stratusagency/stratus-commits-to-the-development-of-web-3-0-677e82406537',
+							icon_url: faucetWorkImage,
+							url: 'https://faucet.stratusagency.io/',
 							date: 2023,
-							title: isFR ? "STRATUS s'engage dans le développement du Web 3.0" : "STRATUS commits to the development of Web 3.0"
+							title: "GÖERLI FAUCET"
 						}} />
 
 						<WorkElement options={{
@@ -317,6 +316,13 @@ export default function App({ isFR = false }) {
 						}} />
 
 						<WorkElement options={{
+							icon_url: lightNodeWorkImage,
+							url: 'https://medium.com/@stratusagency/stratus-commits-to-the-development-of-web-3-0-677e82406537',
+							date: 2023,
+							title: isFR ? "STRATUS s'engage dans le développement du Web 3.0" : "STRATUS commits to the development of Web 3.0"
+						}} />
+
+						<WorkElement options={{
 							icon_url: solidityDocsWorkImage,
 							url: 'https://docs.soliditylang.org/fr/v0.8.11/',
 							date: 2022,
@@ -328,13 +334,6 @@ export default function App({ isFR = false }) {
 							url: 'https://app.poap.xyz/token/6246968',
 							date: 2022,
 							title: isFR ? "DOCUMENTATION D'ETHEREUM" : "Ethereum documentation POAP"
-						}} />
-
-						<WorkElement options={{
-							icon_url: netalysWorkImage,
-							url: 'https://netalys-hexagon.netlify.app/',
-							date: 2022,
-							title: "NETALYS"
 						}} />
 					</div>
 				</div>

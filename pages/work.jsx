@@ -14,6 +14,7 @@ import netalysWorkImage from "../static/images/netalys-work.webp"
 import lightNodeWorkImage from "../static/images/light-node-work.webp"
 import poapWorkImage from "../static/images/poap-work.webp"
 import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
+import faucetWorkImage from "../static/images/faucet-work.webp"
 
 import CTA from "./components/CTA"
 import Navbar from "./components/Navbar"
@@ -57,10 +58,10 @@ export default function Work({ isFR }) {
                 <div className="row">
                     <div className="left">
                         <WorkElement options={{
-                            icon_url: lightNodeWorkImage,
-                            url: 'https://medium.com/@stratusagency/stratus-commits-to-the-development-of-web-3-0-677e82406537',
+                            icon_url: meetupLyonWorkImage,
+                            url: 'https://www.linkedin.com/company/meetup-lyon/',
                             date: 2023,
-                            title: isFR ? "STRATUS s'engage dans le développement du Web 3.0" : "STRATUS commits to the development of Web 3.0"
+                            title: "Exploring the Future of Web 3.0 with STRATUS"
                         }} />
 
                         <WorkElement options={{
@@ -94,10 +95,17 @@ export default function Work({ isFR }) {
 
                     <div className="right">
                         <WorkElement options={{
-                            icon_url: meetupLyonWorkImage,
-                            url: 'https://www.linkedin.com/company/meetup-lyon/',
+                            icon_url: faucetWorkImage,
+                            url: 'https://faucet.stratusagency.io/',
                             date: 2023,
-                            title: "Exploring the Future of Web 3.0 with STRATUS"
+                            title: "GÖERLI FAUCET"
+                        }} />
+
+                        <WorkElement options={{
+                            icon_url: lightNodeWorkImage,
+                            url: 'https://medium.com/@stratusagency/stratus-commits-to-the-development-of-web-3-0-677e82406537',
+                            date: 2023,
+                            title: isFR ? "STRATUS s'engage dans le développement du Web 3.0" : "STRATUS commits to the development of Web 3.0"
                         }} />
 
                         <WorkElement options={{
