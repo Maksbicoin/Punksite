@@ -61,7 +61,7 @@ export default function Work({ isFR }) {
                             icon_url: meetupLyonWorkImage,
                             url: 'https://www.linkedin.com/company/meetup-lyon/',
                             date: 2023,
-                            title: "Exploring the Future of Web 3.0 with STRATUS"
+                            title: "STRATUS X MEETUP LYON"
                         }} />
 
                         <WorkElement options={{
