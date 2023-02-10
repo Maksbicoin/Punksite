@@ -23,7 +23,7 @@ export default function Navbar({ isFR }) {
         href: isFR ? "/fr/a-propos.html" : "/about.html"
     }, {
         name: "contact",
-        href: "https://calendly.com/stratus_agency/meet"
+        href: "/contact.html"
     }]
 
     const handleNavbar = e => {

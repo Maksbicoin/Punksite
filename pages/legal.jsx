@@ -17,9 +17,19 @@ export default function Legal({ isFR }) {
                 <div className="content">
                     <h2>{isFR ? "Légal" : "Legal"}</h2>
 
+
                     <p>{isFR ? "Siret" : "Siret number"} : 910 368 919 00015</p>
-                    <p>{isFR ? "Les mockups sont faites par" : "Mockups are made by"} <a href="https://www.anthonyboyd.graphics/" target="_blank" rel="noopener noreferrer"><u>Anthony Boyd</u></a>.</p>
-                    <p>{isFR ? "Le modèle Web est réalisé par" : "Web template is made by"} <a href="https://www.leonardomattar.com/" target="_blank" rel="noopener noreferrer"><u>Leonardo Mattar</u></a>.</p>
+
+                    <p>
+                        Mockups are made by {' '}
+                        <a href="https://www.anthonyboyd.graphics/" target="_blank" rel="noopener noreferrer"><u>Anthony Boyd</u></a> {' '}
+                        and <a href="https://www.behance.net/AlekseyBelorukov" target="_blank" rel="noopener noreferrer"><u>Aleksey Belorukov</u></a>.
+                    </p>
+
+                    <p>
+                        Web template is made by {' '}
+                        <a href="https://www.leonardomattar.com/" target="_blank" rel="noopener noreferrer"><u>Leonardo Mattar</u></a>.
+                    </p>
                 </div>
             </section>
 
