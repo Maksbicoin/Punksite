@@ -138,7 +138,7 @@ export default function Contact(isFR = false) {
                 </div>
             </section>
 
-            <CTA isFR={false} />
+            {/* <CTA isFR={false} /> */}
 
             <Footer />
         </>
