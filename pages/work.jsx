@@ -7,7 +7,6 @@ import gsap from "gsap"
 
 import solidityDocsWorkImage from "../static/images/solidity-docs-work.webp"
 import bbcsLtddWorkImage from "../static/images/bbcs-ltdd-work.webp"
-import megtWorkImage from "../static/images/megt-work.webp"
 import montBlancClimateChangeWorkImage from "../static/images/mont-blanc-climate-change-work.webp"
 import cirrusWorkImage from "../static/images/cirrus-work.webp"
 import netalysWorkImage from "../static/images/netalys-work.webp"
@@ -62,13 +61,6 @@ export default function Work({ isFR }) {
                             url: 'https://www.linkedin.com/company/meetup-lyon/',
                             date: 2023,
                             title: "STRATUS X MEETUP LYON"
-                        }} />
-
-                        <WorkElement options={{
-                            icon_url: megtWorkImage,
-                            url: 'https://megt.io',
-                            date: 2022,
-                            title: "METAVERSE GT"
                         }} />
 
                         <WorkElement options={{

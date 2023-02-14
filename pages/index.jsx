@@ -12,8 +12,6 @@ import solidityDocsImage from "../static/images/solidity-docs.webp"
 import solidityDocsWorkImage from "../static/images/solidity-docs-work.webp"
 import bbcsLtddImage from "../static/images/bbcs-ltdd.webp"
 import peer3Image from "../static/images/peer3.webp"
-import megtImage from "../static/images/megt.webp"
-import megtWorkImage from "../static/images/megt-work.webp"
 import montBlancClimateChangeImage from "../static/images/mont-blanc-climate-change.webp"
 import montBlancClimateChangeWorkImage from "../static/images/mont-blanc-climate-change-work.webp"
 import cirrusImage from "../static/images/cirrus.webp"
@@ -220,7 +218,7 @@ export default function App({ isFR = false }) {
 				</div>
 
 				<div className="center">
-					<PortfolioImagesColumn list={[megtImage, faucetImage, montBlancClimateChangeImage]} />
+					<PortfolioImagesColumn list={[faucetImage, montBlancClimateChangeImage, poapImage]} />
 				</div>
 
 				<div className="right">
@@ -286,13 +284,6 @@ export default function App({ isFR = false }) {
 						}} />
 
 						<WorkElement options={{
-							icon_url: megtWorkImage,
-							url: 'https://megt.io',
-							date: 2022,
-							title: "METAVERSE GT"
-						}} />
-
-						<WorkElement options={{
 							icon_url: cirrusWorkImage,
 							url: 'https://cirrus.stratusagency.io',
 							date: 2022,
@@ -300,10 +291,10 @@ export default function App({ isFR = false }) {
 						}} />
 
 						<WorkElement options={{
-							icon_url: montBlancClimateChangeWorkImage,
-							url: 'https://mont-blanc-climate-change.netlify.app',
+							icon_url: poapWorkImage,
+							url: 'https://app.poap.xyz/token/6246968',
 							date: 2022,
-							title: isFR ? "MONT BLANC — CHANGEMENT CLIMATIQUE" : "MONT BLANC — CLIMATE CHANGE"
+							title: isFR ? "DOCUMENTATION D'ETHEREUM" : "Ethereum documentation POAP"
 						}} />
 					</div>
 
@@ -327,13 +318,6 @@ export default function App({ isFR = false }) {
 							url: 'https://docs.soliditylang.org/fr/v0.8.11/',
 							date: 2022,
 							title: isFR ? "DOCUMENTATION DE SOLIDITY" : "SOLIDITY DOCUMENTATION"
-						}} />
-
-						<WorkElement options={{
-							icon_url: poapWorkImage,
-							url: 'https://app.poap.xyz/token/6246968',
-							date: 2022,
-							title: isFR ? "DOCUMENTATION D'ETHEREUM" : "Ethereum documentation POAP"
 						}} />
 					</div>
 				</div>
