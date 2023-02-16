@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import gsap from "gsap"
@@ -13,13 +14,13 @@ import solidityDocsWorkImage from "../static/images/solidity-docs-work.webp"
 import bbcsLtddImage from "../static/images/bbcs-ltdd.webp"
 import peer3Image from "../static/images/peer3.webp"
 import montBlancClimateChangeImage from "../static/images/mont-blanc-climate-change.webp"
-import montBlancClimateChangeWorkImage from "../static/images/mont-blanc-climate-change-work.webp"
 import cirrusImage from "../static/images/cirrus.webp"
 import cirrusWorkImage from "../static/images/cirrus-work.webp"
 import lightNodeImage from "../static/images/light-node.webp"
 import lightNodeWorkImage from "../static/images/light-node-work.webp"
 import poapImage from "../static/images/poap.webp"
 import poapWorkImage from "../static/images/poap-work.webp"
+import meetupLyonImage from "../static/images/meetuplyon.webp"
 import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
 import faucetImage from "../static/images/faucet.webp"
 import faucetWorkImage from "../static/images/faucet-work.webp"
@@ -214,15 +215,15 @@ export default function App({ isFR = false }) {
 
 			<section className="portfolio">
 				<div className="left">
-					<PortfolioImagesColumn list={[solidityDocsImage, poapImage, peer3Image]} />
+					<PortfolioImagesColumn list={[solidityDocsImage, cirrusImage, peer3Image]} />
 				</div>
 
 				<div className="center">
-					<PortfolioImagesColumn list={[faucetImage, montBlancClimateChangeImage, poapImage]} />
+					<PortfolioImagesColumn list={[faucetImage, meetupLyonImage, montBlancClimateChangeImage]} />
 				</div>
 
 				<div className="right">
-					<PortfolioImagesColumn list={[cirrusImage, lightNodeImage, bbcsLtddImage]} />
+					<PortfolioImagesColumn list={[poapImage, lightNodeImage, bbcsLtddImage]} />
 				</div>
 			</section>
 
@@ -321,6 +322,8 @@ export default function App({ isFR = false }) {
 						}} />
 					</div>
 				</div>
+
+				<Link href="/work.html" className="link">SEE MORE</Link>
 			</section>
 
 			<section className="track">

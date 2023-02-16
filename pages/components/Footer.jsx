@@ -104,7 +104,7 @@ export default function Footer({ isFR, timeline }) {
                         <Link href={`/${isFR ? "fr/" : ""}`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "Accueil" : "Home"}</Link>
                         <Link href={`/${isFR ? "fr/portfolio" : "work"}.html`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "Portfolio" : "Work"}</Link>
                         <Link href={`/${isFR ? "fr/a-propos" : "about"}.html`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "A propos" : "About"}</Link>
-                        <Link href={`/contact.html`} onClick={() => timeline ? timeline.killAll() : undefined}>Contact</Link>
+                        <Link href="/contact.html" onClick={() => timeline ? timeline.killAll() : undefined}>Contact</Link>
                     </div>
                 </div>
 

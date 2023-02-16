@@ -98,7 +98,7 @@ export default function About({ isFR }) {
                                 </p>
                             </div>
 
-                            <a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer">{isFR ? "PLANIFIER UN APPEL" : "SCHEDULE A CALL"}</a>
+                            <a href="https://calendly.com/stratus_agency/meet" target="_blank" rel="noopener noreferrer" className="link">{isFR ? "PLANIFIER UN APPEL" : "SCHEDULE A CALL"}</a>
                         </div>
                     </div>
 

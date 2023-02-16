@@ -30,6 +30,11 @@ export default function Legal({ isFR }) {
                         Web template is made by {' '}
                         <a href="https://www.leonardomattar.com/" target="_blank" rel="noopener noreferrer"><u>Leonardo Mattar</u></a>.
                     </p>
+
+                    <p>
+                        Icons are coming from {' '}
+                        <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer"><u>Flaticon</u></a>.
+                    </p>
                 </div>
             </section>
 
