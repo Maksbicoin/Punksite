@@ -38,7 +38,7 @@ import CTA from "./components/CTA"
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function App({ isFR = false }) {
+export default function App() {
 	const [load, setLoad] = useState(false);
 	const [timeline, setTimeline] = useState();
 
@@ -202,11 +202,11 @@ export default function App({ isFR = false }) {
 	return (
 		<>
 			<Head>
-				<title>{isFR ? "STRATUS - Agence Blockchain, Crypto, & Web 3.0 RP" : "STRATUS - Blockchain, Crypto, & Web 3.0 PR Agency"}</title>
+				<title>STRATUS - Blockchain, Crypto, & Web 3.0 PR Agency</title>
 				<link rel="shortcut icon" href="/static/favicon.ico" />
 			</Head>
 
-			<Navbar isFR={isFR} />
+			<Navbar />
 
 			<header>
 				<h1>STRATUS</h1>
@@ -228,51 +228,51 @@ export default function App({ isFR = false }) {
 			</section>
 
 			<section className="values">
-				<h2>{isFR ? "La première agence Web 3.0 basée en France, spécialisée dans la production d'outils de communication futuristes." : "The leading web 3.0 agency labelled French Tech Community based in France, focused on producing pieces of futuristic communication and tools."}</h2>
+				<h2>The leading web 3.0 agency labelled French Tech Community based in France, focused on producing pieces of futuristic communication and tools.</h2>
 
 				<div className="values-container">
 					<ValueElement options={{
 						icon_url: computerImage,
-						title: isFR ? "Donne la progression du travail en direct" : "Giving the track of the work in live",
-						description: isFR ? "Suivez vos travaux en temps réel, sans attendre les heures d'ouverture pour nous demander l'état d'avancement de votre projet." : "Follow your work at real time, without waiting for the opening hours to ask us the progress."
+						title: "Giving the track of the work in live",
+						description: "Follow your work at real time, without waiting for the opening hours to ask us the progress."
 					}} />
 
 					<ValueElement options={{
 						icon_url: chatImage,
-						title: isFR ? "Donne ses conseils d'experts" : "Giving our tips as experts",
-						description: isFR ? "Nous sommes là pour vous aider, pour vous donner nos meilleurs conseils. Contactez-nous maintenant pour obtenir plus de détails !" : "We are here to help you, to provide you our best piece of advice. Contact us now to get more details!"
+						title: "Giving our tips as experts",
+						description: "We are here to help you, to provide you our best piece of advice. Contact us now to get more details!"
 					}} />
 
 					<ValueElement options={{
 						icon_url: handShakeImage,
-						title: isFR ? "Construis des collaborations à long terme" : "Building long-term partnerships",
-						description: isFR ? "Nous ne travaillons pas avec vous une seule fois. Nous travaillons avec vous sur plusieurs travaux, sur plusieurs années." : "We do not work with you for once. We work with you for several works, several years."
+						title: "Building long-term partnerships",
+						description: "We do not work with you for once. We work with you for several works, several years."
 					}} />
 
 					<ValueElement options={{
 						icon_url: questionImage,
-						title: isFR ? "Réponds dans un délai de 12h" : "Responding in 12h delay",
-						description: isFR ? "C'est la promesse que nous vous faisons pour toujours. Nous vous répondrons aussi rapidement que possible, quelle que soit la situation." : "This is our promise to you forever. We will respond to you as quickly as possible, no matter what the situation."
+						title: "Responding in 12h delay",
+						description: "This is our promise to you forever. We will respond to you as quickly as possible, no matter what the situation."
 					}} />
 
 					<ValueElement options={{
 						icon_url: starsImage,
-						title: isFR ? "Rends chacun de ses clients unique" : "Making all of our clients unique",
-						description: isFR ? "Nous ne fournissons pas de prix ou de devis sans avoir analysé votre situation." : "We do not provide prices or quotes without analyzing your situation."
+						title: "Making all of our clients unique",
+						description: "We do not provide prices or quotes without analyzing your situation."
 					}} />
 
 					<ValueElement options={{
 						icon_url: heartImage,
-						title: isFR ? "Travaille avec tout le monde" : "Working with everyone",
-						description: isFR ? "Que vous soyez une entreprise basée dans un domaine spécifique ou non, vous devez avoir la chance d'entrer dans le Web 3.0." : "Whether you are a business based in a specific field, you should have the chance to dive into Web 3.0."
+						title: "Working with everyone",
+						description: "Whether you are a business based in a specific field, you should have the chance to dive into Web 3.0."
 					}} />
 				</div>
 			</section>
 
 			<section className="work">
 				<div className="titles">
-					<h3>{isFR ? "PROJETS ACCOMPLIS" : "COMPLETED PROJECTS"}</h3>
-					<h2>{isFR ? "TRAVAIL RÉCENT" : "RECENT WORK"}</h2>
+					<h3>COMPLETED PROJECTS</h3>
+					<h2>RECENT WORK</h2>
 				</div>
 
 				<div className="row">
@@ -295,7 +295,7 @@ export default function App({ isFR = false }) {
 							icon_url: poapWorkImage,
 							url: 'https://app.poap.xyz/token/6246968',
 							date: 2022,
-							title: isFR ? "DOCUMENTATION D'ETHEREUM" : "Ethereum documentation POAP"
+							title: "Ethereum documentation POAP"
 						}} />
 					</div>
 
@@ -311,14 +311,14 @@ export default function App({ isFR = false }) {
 							icon_url: lightNodeWorkImage,
 							url: 'https://medium.com/@stratusagency/stratus-commits-to-the-development-of-web-3-0-677e82406537',
 							date: 2023,
-							title: isFR ? "STRATUS s'engage dans le développement du Web 3.0" : "STRATUS commits to the development of Web 3.0"
+							title: "STRATUS commits to the development of Web 3.0"
 						}} />
 
 						<WorkElement options={{
 							icon_url: solidityDocsWorkImage,
 							url: 'https://docs.soliditylang.org/fr/v0.8.11/',
 							date: 2022,
-							title: isFR ? "DOCUMENTATION DE SOLIDITY" : "SOLIDITY DOCUMENTATION"
+							title: "SOLIDITY DOCUMENTATION"
 						}} />
 					</div>
 				</div>
@@ -412,64 +412,64 @@ export default function App({ isFR = false }) {
 			<section className="services">
 				<hr />
 
-				<h2>{isFR ? "LISTE DES SERVICES DE STRATUS" : "STRATUS AGENCY SERVICES LIST"}</h2>
+				<h2>STRATUS AGENCY SERVICES LIST</h2>
 
 				<div className="row">
 					<div className="services-item">
-						<span>{isFR ? "fournisseur de NFT" : "NFT provider"}</span>
-						<span>{isFR ? "nœuds ETH" : "ETH nodes"}</span>
+						<span>NFT provider</span>
+						<span>ETH nodes</span>
 						<span>ERC-721</span>
 						<span>ERC-1155</span>
 						<span>ERC-998</span>
 					</div>
 
 					<div className="services-item">
-						<span>{isFR ? "analyse des EIP" : "EIP analysis"}</span>
-						<span>{isFR ? "validateur ETH" : "ETH validator"}</span>
+						<span>EIP analysis</span>
+						<span>ETH validator</span>
 						<span>DeFi</span>
 						<span>PoS & PoW</span>
-						<span>{isFR ? "platformes" : "platforms"}</span>
+						<span>platforms</span>
 					</div>
 
 					<div className="services-item">
-						<span>{isFR ? "développement" : "development"}</span>
+						<span>development</span>
 						<span>performance</span>
 						<span>branding</span>
 						<span>marketing</span>
-						<span>{isFR ? "audit/conseils" : "audit"}</span>
+						<span>audit</span>
 					</div>
 				</div>
 			</section>
 
 			<section className="qa">
-				<h2>{isFR ? "QUESTIONS FRÉQUEMMENT POSÉES" : "FREQUENTLY ASKED QUESTIONS"}</h2>
+				<h2>FREQUENTLY ASKED QUESTIONS</h2>
 
 				<div className="questions-list">
 					<QuestionElement options={{
-						title: isFR ? "combien cela coûte-t-il ?" : "how much does it cost?",
-						text: isFR ? "Nos prix sont personnalisés et adaptés pour tous nos clients." : "Our prices are personalized to all our customers."
+						title: "how much does it cost?",
+						text: "Our prices are personalized to all our customers."
 					}} />
 
 					<QuestionElement options={{
-						title: isFR ? "comment je peux vous contacter ?" : "how can i contact you?",
-						text: isFR ? "Vous pouvez nous contacter sur contact@stratusagency.io, ou sur notre page LinkedIn. Ce sera un plaisir de travailler avec vous !" : "You can contact us on contact@stratusagency.io, else on our LinkedIn page. It would be a pleasure to work with you!"
+						title: "how can i contact you?",
+						text: "You can contact us on contact@stratusagency.io, else on our LinkedIn page. It would be a pleasure to work with you!"
 					}} />
 
 					<QuestionElement options={{
-						title: isFR ? "combien de révisions par projet ?" : "how many revisions per project?",
-						text: isFR ? "Nous vous accordons 2 révisions par projet. Au-delà de cette capacité, les révisions suivantes seront facturées." : "We give you 2 revisions per project. Beyond this capacity, the following revisions will be charged.",
+						title: "how many revisions per project?",
+						text: "We give you 2 revisions per project. Beyond this capacity, the following revisions will be charged.",
 					}} />
 
 					<QuestionElement options={{
-						title: isFR ? "combien de temps faudra-t-il pour terminer mon projet ?" : "how long will it take to receive my project?",
-						text: isFR ? "Cela dépendra de vos spécifications et de l'urgence de votre projet." : "This will depend on your specifications and the urgency for your project.",
+						title: "how long will it take to receive my project?",
+						text: "This will depend on your specifications and the urgency for your project.",
 					}} />
 				</div>
 			</section>
 
-			<CTA isFR={isFR} />
+			<CTA />
 
-			<Footer isFR={isFR} timeline={timeline} />
+			<Footer timeline={timeline} />
 		</>
 	);
 }

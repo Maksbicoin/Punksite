@@ -1,13 +1,11 @@
 import { useState } from "react"
 
 import Head from "next/head"
-import Image from "next/image"
 
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
-import CTA from "./components/CTA"
 
-export default function Contact(isFR = false) {
+export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -61,11 +59,11 @@ export default function Contact(isFR = false) {
     return (
         <>
             <Head>
-                <title>{isFR ? "STRATUS - Agence Blockchain, Crypto, & Web 3.0 RP" : "STRATUS - Blockchain, Crypto, & Web 3.0 PR Agency"}</title>
+                <title>STRATUS - Contact</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 
-            <Navbar isFR={false} />
+            <Navbar />
 
             <section className="contact">
                 <div className="row">
@@ -137,8 +135,6 @@ export default function Contact(isFR = false) {
                     </div>
                 </div>
             </section>
-
-            {/* <CTA isFR={false} /> */}
 
             <Footer />
         </>

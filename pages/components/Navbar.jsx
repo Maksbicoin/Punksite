@@ -9,18 +9,18 @@ import navbarImage from "../../static/images/navbar-image.webp"
 import logoLargeBlackImage from "../../static/images/logo-large-black.svg"
 import hamburgerIcon from "../../static/images/hamburger-icon.svg"
 
-export default function Navbar({ isFR }) {
+export default function Navbar() {
     const hamburgerButtonRef = useRef();
 
     const buttonsArray = [{
-        name: isFR ? "accueil" : "home",
-        href: isFR ? "/fr.html" : "/"
+        name: "home",
+        href: "/"
     }, {
-        name: isFR ? "portfolio" : "work",
-        href: isFR ? "/fr/portfolio.html" : "/work.html"
+        name: "work",
+        href: "/work.html"
     }, {
-        name: isFR ? "a propos" : "about",
-        href: isFR ? "/fr/a-propos.html" : "/about.html"
+        name: "about",
+        href: "/about.html"
     }, {
         name: "contact",
         href: "/contact.html"
@@ -152,7 +152,7 @@ export default function Navbar({ isFR }) {
 
             <nav>
                 <div className="logo">
-                    <Link href={isFR ? "/fr.html" : "/"} onClick={() => typeof timeline !== "undefined" ?? timeline.killAll()}>
+                    <Link href="/" onClick={() => typeof timeline !== "undefined" ?? timeline.killAll()}>
                         <Image
                             src={logoLargeBlackImage}
                             alt="logo"
@@ -162,7 +162,7 @@ export default function Navbar({ isFR }) {
                     </Link>
                 </div>
 
-                <h2>{isFR ? "Nous vous amenons dans le Web 3.0" : "WE BRING YOU TO WEB 3.0"}</h2>
+                <h2>WE BRING YOU TO WEB 3.0</h2>
 
                 <div className="hamburger">
                     <button onClick={handleNavbar} ref={hamburgerButtonRef}>

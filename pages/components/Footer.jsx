@@ -10,7 +10,7 @@ import linkedinImage from "../../static/images/linkedin.png"
 import mediumImage from "../../static/images/medium.svg"
 import laFrenchTechImage from "../../static/images/lafrenchtech.webp"
 
-export default function Footer({ isFR, timeline }) {
+export default function Footer({ timeline }) {
     return (
         <footer>
             <div className="row">
@@ -24,11 +24,8 @@ export default function Footer({ isFR, timeline }) {
                         />
 
                         <p>
-                            {isFR ? `STRATUS est un fournisseur de RP de premier plan dans la Blockchain, les Crypto-monnaies, les NFT et le Web 3.0.
-                                Engagé comme validateur ETH, traducteur officiel des documentations Ethereum & Solidity. Incubés à la French Tech Mont-Blanc.`
-
-                                : `STRATUS is a leading Blockchain, Crypto, NFT & Web 3.0 PR provider. Committed as ETH validator, ETH & Solidity document official translator.
-                                Incubated at La French Tech Mont-Blanc.`}
+                            STRATUS is a leading Blockchain, Crypto, NFT & Web 3.0 PR provider. Committed as ETH validator, ETH & Solidity document official translator.
+                                Incubated at La French Tech Mont-Blanc.
                         </p>
 
                         <div className="social-wrap">
@@ -101,19 +98,19 @@ export default function Footer({ isFR, timeline }) {
                     <h2>PAGES</h2>
 
                     <div className="list">
-                        <Link href={`/${isFR ? "fr/" : ""}`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "Accueil" : "Home"}</Link>
-                        <Link href={`/${isFR ? "fr/portfolio" : "work"}.html`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "Portfolio" : "Work"}</Link>
-                        <Link href={`/${isFR ? "fr/a-propos" : "about"}.html`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "A propos" : "About"}</Link>
+                        <Link href="/" onClick={() => timeline ? timeline.killAll() : undefined}>Home</Link>
+                        <Link href="/work.html" onClick={() => timeline ? timeline.killAll() : undefined}>Work</Link>
+                        <Link href="/about.html" onClick={() => timeline ? timeline.killAll() : undefined}>About</Link>
                         <Link href="/contact.html" onClick={() => timeline ? timeline.killAll() : undefined}>Contact</Link>
                     </div>
                 </div>
 
                 <div className="column utility">
-                    <h2>{isFR ? "LÉGAL" : "LEGALS"}</h2>
+                    <h2>LEGALS</h2>
 
                     <div className="list">
                         {/* <Link href="/rgpd" onClick={() => timeline ? timeline.killAll() : undefined}>RGPD</Link> */}
-                        <Link href={`/${isFR ? "fr/" : ""}legal.html`} onClick={() => timeline ? timeline.killAll() : undefined}>{isFR ? "Légal" : "Legal"}</Link>
+                        <Link href="/legal.html" onClick={() => timeline ? timeline.killAll() : undefined}>Legal</Link>
                     </div>
                 </div>
             </div>
@@ -124,7 +121,7 @@ export default function Footer({ isFR, timeline }) {
                 <div></div>
 
                 <a href="https://www.leonardomattar.com/" rel="nopenner noreferrer" target="_blank">
-                    <p>© Template {isFR ? "par" : "by"} Leonardo Mattar</p>
+                    <p>© Template by Leonardo Mattar</p>
                 </a>
             </div>
         </footer>

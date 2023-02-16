@@ -3,22 +3,22 @@ import Head from "next/head"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 
-export default function Legal({ isFR }) {
+export default function Legal() {
     return (
         <>
             <Head>
-                <title>STRATUS - {isFR ? "Légal" : "Legal"}</title>
+                <title>STRATUS - Legal</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 
-            <Navbar isFR={isFR} />
+            <Navbar />
 
             <section className="legal">
                 <div className="content">
-                    <h2>{isFR ? "Légal" : "Legal"}</h2>
+                    <h2>Legal</h2>
 
 
-                    <p>{isFR ? "Siret" : "Siret number"} : 910 368 919 00015</p>
+                    <p>Siret number: 910 368 919 00015</p>
 
                     <p>
                         Mockups are made by {' '}
@@ -38,7 +38,7 @@ export default function Legal({ isFR }) {
                 </div>
             </section>
 
-            <Footer isFR={isFR} />
+            <Footer />
         </>
     )
 }
