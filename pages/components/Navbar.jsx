@@ -19,11 +19,11 @@ export default function Navbar() {
         name: "work",
         href: "/work.html"
     }, {
+        name: "blog",
+        href: "/blog.html"
+    }, {
         name: "about",
         href: "/about.html"
-    }, {
-        name: "contact",
-        href: "/contact.html"
     }]
 
     const handleNavbar = e => {

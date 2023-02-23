@@ -24,8 +24,9 @@ export default function Footer({ timeline }) {
                         />
 
                         <p>
-                            STRATUS is a leading Blockchain, Crypto, NFT & Web 3.0 PR provider. Committed as ETH validator, ETH & Solidity document official translator.
-                                Incubated at La French Tech Mont-Blanc.
+                            STRATUS is a leading Blockchain, Crypto, NFT & Web 3.0 PR provider.
+                            Committed as Ethereum validator. Ethereum, Solidity & Optimism documentation official translator. <br />
+                            Incubated at La French Tech Mont-Blanc.
                         </p>
 
                         <div className="social-wrap">
@@ -101,6 +102,7 @@ export default function Footer({ timeline }) {
                         <Link href="/" onClick={() => timeline ? timeline.killAll() : undefined}>Home</Link>
                         <Link href="/work.html" onClick={() => timeline ? timeline.killAll() : undefined}>Work</Link>
                         <Link href="/about.html" onClick={() => timeline ? timeline.killAll() : undefined}>About</Link>
+                        <Link href="/blog.html" onClick={() => timeline ? timeline.killAll() : undefined}>Blog</Link>
                         <Link href="/contact.html" onClick={() => timeline ? timeline.killAll() : undefined}>Contact</Link>
                     </div>
                 </div>

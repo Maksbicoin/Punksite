@@ -7,12 +7,11 @@ import Link from "next/link"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import gsap from "gsap"
 
-import Footer from "./components/Footer"
-
 import solidityDocsImage from "../static/images/solidity-docs.webp"
 import solidityDocsWorkImage from "../static/images/solidity-docs-work.webp"
 import bbcsLtddImage from "../static/images/bbcs-ltdd.webp"
-import peer3Image from "../static/images/peer3.webp"
+import tiharImage from "../static/images/tihar.webp"
+import tiharWorkImage from "../static/images/tihar-work.webp"
 import montBlancClimateChangeImage from "../static/images/mont-blanc-climate-change.webp"
 import cirrusImage from "../static/images/cirrus.webp"
 import cirrusWorkImage from "../static/images/cirrus-work.webp"
@@ -33,7 +32,6 @@ import handShakeImage from "../static/images/hand-shake.webp"
 import heartImage from "../static/images/heart.webp"
 import starsImage from "../static/images/stars.webp"
 
-import Navbar from "./components/Navbar"
 import CTA from "./components/CTA"
 
 gsap.registerPlugin(ScrollTrigger);
@@ -206,8 +204,6 @@ export default function App() {
 				<link rel="shortcut icon" href="/static/favicon.ico" />
 			</Head>
 
-			<Navbar />
-
 			<header>
 				<h1>STRATUS</h1>
 				<h1>AGENCY</h1>
@@ -215,11 +211,11 @@ export default function App() {
 
 			<section className="portfolio">
 				<div className="left">
-					<PortfolioImagesColumn list={[solidityDocsImage, cirrusImage, peer3Image]} />
+					<PortfolioImagesColumn list={[solidityDocsImage, cirrusImage, montBlancClimateChangeImage]} />
 				</div>
 
 				<div className="center">
-					<PortfolioImagesColumn list={[faucetImage, meetupLyonImage, montBlancClimateChangeImage]} />
+					<PortfolioImagesColumn list={[faucetImage, meetupLyonImage,tiharImage]} />
 				</div>
 
 				<div className="right">
@@ -285,10 +281,10 @@ export default function App() {
 						}} />
 
 						<WorkElement options={{
-							icon_url: cirrusWorkImage,
-							url: 'https://cirrus.stratusagency.io',
-							date: 2022,
-							title: "CIRRUS"
+							icon_url: tiharWorkImage,
+							url: 'https://tihar.webflow.io',
+							date: 2023,
+							title: "STRATUS X TihAR"
 						}} />
 
 						<WorkElement options={{
@@ -327,8 +323,8 @@ export default function App() {
 			</section>
 
 			<section className="track">
-				<div class="track-wrap">
-					<div class="element">
+				<div className="track-wrap">
+					<div className="element">
 						<Image
 							src={iconBlackImage}
 							alt=""
@@ -337,11 +333,11 @@ export default function App() {
 						/>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<span>WEB 3.0</span>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<Image
 							src={iconBlackImage}
 							alt=""
@@ -350,11 +346,11 @@ export default function App() {
 						/>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<span>METAMASK</span>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<Image
 							src={iconBlackImage}
 							alt=""
@@ -363,11 +359,11 @@ export default function App() {
 						/>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<span>INFURA</span>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<Image
 							src={iconBlackImage}
 							alt=""
@@ -376,11 +372,11 @@ export default function App() {
 						/>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<span>MORALIS</span>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<Image
 							src={iconBlackImage}
 							alt=""
@@ -389,11 +385,11 @@ export default function App() {
 						/>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<span>DEFI</span>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<Image
 							src={iconBlackImage}
 							alt=""
@@ -402,7 +398,7 @@ export default function App() {
 						/>
 					</div>
 
-					<div class="element">
+					<div className="element">
 						<span>ETHEREUM</span>
 					</div>
 				</div>
@@ -468,8 +464,6 @@ export default function App() {
 			</section>
 
 			<CTA />
-
-			<Footer timeline={timeline} />
 		</>
 	);
 }

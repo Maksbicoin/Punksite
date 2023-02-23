@@ -2,9 +2,6 @@ import { useState } from "react"
 
 import Head from "next/head"
 
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
@@ -62,8 +59,6 @@ export default function Contact() {
                 <title>STRATUS - Contact</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
-
-            <Navbar />
 
             <section className="contact">
                 <div className="row">
@@ -135,8 +130,6 @@ export default function Contact() {
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </>
     )
 }

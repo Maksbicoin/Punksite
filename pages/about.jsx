@@ -7,8 +7,6 @@ import aboutDescription2Image from "../static/images/about-description-2.webp"
 import aboutDescription3Image from "../static/images/about-description-3.webp"
 
 import CTA from "./components/CTA"
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
 
 export default function About({ isFR }) {
     return (
@@ -17,8 +15,6 @@ export default function About({ isFR }) {
                 <title>STRATUS -  About</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
-
-            <Navbar />
 
             <section className="about">
                 <div className="content">
@@ -127,8 +123,6 @@ export default function About({ isFR }) {
             </section>
 
             <CTA />
-
-            <Footer isFR={isFR} />
         </>
     )
 }

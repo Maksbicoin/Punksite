@@ -16,8 +16,6 @@ import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
 import faucetWorkImage from "../static/images/faucet-work.webp"
 
 import CTA from "./components/CTA"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
 
 export default function Work() {
     useEffect(() => {
@@ -45,8 +43,6 @@ export default function Work() {
                 <title>STRATUS - Work</title>
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
-
-            <Navbar />
 
             <section className="work page">
                 <div className="titles">
@@ -125,8 +121,6 @@ export default function Work() {
             </section>
 
             <CTA />
-
-            <Footer />
         </>
     )
 }

@@ -1,8 +1,5 @@
 import Head from "next/head"
 
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-
 export default function Legal() {
     return (
         <>
@@ -11,14 +8,12 @@ export default function Legal() {
                 <link rel="shortcut icon" href="/static/favicon.ico" />
             </Head>
 
-            <Navbar />
-
             <section className="legal">
                 <div className="content">
                     <h2>Legal</h2>
 
 
-                    <p>Siret number: 910 368 919 00015</p>
+                    <p>Siret number: 948540927 00019</p>
 
                     <p>
                         Mockups are made by {' '}
@@ -37,8 +32,6 @@ export default function Legal() {
                     </p>
                 </div>
             </section>
-
-            <Footer />
         </>
     )
 }
