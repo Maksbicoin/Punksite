@@ -18,7 +18,8 @@ export default function Legal() {
                     <p>
                         Mockups are made by {' '}
                         <a href="https://www.anthonyboyd.graphics/" target="_blank" rel="noopener noreferrer"><u>Anthony Boyd</u></a> {' '}
-                        and <a href="https://www.behance.net/AlekseyBelorukov" target="_blank" rel="noopener noreferrer"><u>Aleksey Belorukov</u></a>.
+                        and <a href="https://www.behance.net/AlekseyBelorukov" target="_blank" rel="noopener noreferrer"><u>Aleksey Belorukov</u></a> {' '}
+                        and <a href="https://www.ls.graphics/">ls.graphics</a>.
                     </p>
 
                     <p>

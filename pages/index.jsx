@@ -8,13 +8,10 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import gsap from "gsap"
 
 import solidityDocsImage from "../static/images/solidity-docs.webp"
-import solidityDocsWorkImage from "../static/images/solidity-docs-work.webp"
-import bbcsLtddImage from "../static/images/bbcs-ltdd.webp"
 import tiharImage from "../static/images/tihar.webp"
 import tiharWorkImage from "../static/images/tihar-work.webp"
 import montBlancClimateChangeImage from "../static/images/mont-blanc-climate-change.webp"
 import cirrusImage from "../static/images/cirrus.webp"
-import cirrusWorkImage from "../static/images/cirrus-work.webp"
 import lightNodeImage from "../static/images/light-node.webp"
 import lightNodeWorkImage from "../static/images/light-node-work.webp"
 import poapImage from "../static/images/poap.webp"
@@ -23,6 +20,8 @@ import meetupLyonImage from "../static/images/meetuplyon.webp"
 import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
 import faucetImage from "../static/images/faucet.webp"
 import faucetWorkImage from "../static/images/faucet-work.webp"
+import optimismImage from "../static/images/optimism.webp"
+import optimismWorkImage from "../static/images/optimism-work.webp"
 
 import iconBlackImage from "../static/images/icon-black.webp"
 import questionImage from "../static/images/question.webp"
@@ -215,11 +214,11 @@ export default function App() {
 				</div>
 
 				<div className="center">
-					<PortfolioImagesColumn list={[faucetImage, meetupLyonImage,tiharImage]} />
+					<PortfolioImagesColumn list={[faucetImage, meetupLyonImage, tiharImage]} />
 				</div>
 
 				<div className="right">
-					<PortfolioImagesColumn list={[poapImage, lightNodeImage, bbcsLtddImage]} />
+					<PortfolioImagesColumn list={[poapImage, lightNodeImage, optimismImage]} />
 				</div>
 			</section>
 
@@ -311,10 +310,10 @@ export default function App() {
 						}} />
 
 						<WorkElement options={{
-							icon_url: solidityDocsWorkImage,
-							url: 'https://docs.soliditylang.org/fr/v0.8.11/',
-							date: 2022,
-							title: "SOLIDITY DOCUMENTATION"
+							icon_url: optimismWorkImage,
+							url: 'https://crowdin.com/project/optimism-help-center/fr',
+							date: 2023,
+							title: "OPTIMISM DOCUMENTATION"
 						}} />
 					</div>
 				</div>

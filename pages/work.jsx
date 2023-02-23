@@ -6,7 +6,6 @@ import Image from "next/image"
 import gsap from "gsap"
 
 import solidityDocsWorkImage from "../static/images/solidity-docs-work.webp"
-import bbcsLtddWorkImage from "../static/images/bbcs-ltdd-work.webp"
 import montBlancClimateChangeWorkImage from "../static/images/mont-blanc-climate-change-work.webp"
 import cirrusWorkImage from "../static/images/cirrus-work.webp"
 import netalysWorkImage from "../static/images/netalys-work.webp"
@@ -15,6 +14,7 @@ import poapWorkImage from "../static/images/poap-work.webp"
 import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
 import faucetWorkImage from "../static/images/faucet-work.webp"
 import tiharWorkImage from "../static/images/tihar-work.webp"
+import optimismWorkImage from "../static/images/optimism-work.webp"
 
 import CTA from "./components/CTA"
 
@@ -68,6 +68,13 @@ export default function Work() {
                         }} />
 
                         <WorkElement options={{
+                            icon_url: optimismWorkImage,
+                            url: 'https://crowdin.com/project/optimism-help-center/fr',
+                            date: 2023,
+                            title: "OPTIMISM DOCUMENTATION"
+                        }} />
+
+                        <WorkElement options={{
                             icon_url: cirrusWorkImage,
                             url: 'https://cirrus.stratusagency.io',
                             date: 2022,
@@ -79,13 +86,6 @@ export default function Work() {
                             url: 'https://mont-blanc-climate-change.netlify.app',
                             date: 2022,
                             title: "MONT BLANC — CLIMATE CHANGE"
-                        }} />
-
-                        <WorkElement options={{
-                            icon_url: bbcsLtddWorkImage,
-                            url: 'https://bbcs.netlify.app',
-                            date: 2021,
-                            title: "BBCS & LTDD"
                         }} />
                     </div>
 
