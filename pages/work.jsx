@@ -14,6 +14,7 @@ import lightNodeWorkImage from "../static/images/light-node-work.webp"
 import poapWorkImage from "../static/images/poap-work.webp"
 import meetupLyonWorkImage from "../static/images/meetuplyon-work.webp"
 import faucetWorkImage from "../static/images/faucet-work.webp"
+import tiharWorkImage from "../static/images/tihar-work.webp"
 
 import CTA from "./components/CTA"
 
@@ -57,6 +58,13 @@ export default function Work() {
                             url: 'https://www.linkedin.com/company/meetup-lyon/',
                             date: 2023,
                             title: "STRATUS X MEETUP LYON"
+                        }} />
+
+                        <WorkElement options={{
+                            icon_url: tiharWorkImage,
+                            url: 'https://tihar.webflow.io/',
+                            date: 2023,
+                            title: "STRATUS X TihAR"
                         }} />
 
                         <WorkElement options={{
