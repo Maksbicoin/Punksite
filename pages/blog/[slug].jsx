@@ -26,6 +26,7 @@ export default function Post({ allPostsData }) {
     const allPostsDataCopy = allPostsData;
 
     const [html, setHTML] = useState();
+    const [description, setDescription] = useState();
 
     useEffect(() => {
         setWidthBanner(window.innerWidth);
@@ -42,6 +43,9 @@ export default function Post({ allPostsData }) {
 
                 setHTML(md.render(content.post));
 
+                let str = content.post.replace(/\*\*|#|\n/g, "");;
+                setDescription(str.slice(0, 100));
+
                 const indexPost = allPostsDataCopy.indexOf(content);
 
                 allPostsDataCopy.splice(indexPost, 1);
@@ -54,13 +58,31 @@ export default function Post({ allPostsData }) {
                 setOtherPostsData(allPostsDataCopy);
                 setLoad(true);
             }
+
         }
+
     }, [load, content, allPostsData, slug, otherPostsData, allPostsDataCopy]);
 
     return load ? <>
         <Head>
-            <title>STRATUS - {content.title}</title>
+            <title>{content.title}</title>
             <link rel="shortcut icon" href="/static/favicon.ico" />
+
+            <meta name="title" content={content.title} />
+            <meta name="description" content={description} />
+
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={content.bannerImage} />
+            <meta property="og:title" content={content.title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content="https://cdn.discordapp.com/attachments/793382333339271178/1055180454900285540/icon_black.jpg" />
+
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content={content.bannerImage} />
+            <meta property="twitter:title" content={content.title} />
+            <meta property="twitter:description" content={description} />
+            <meta property="twitter:image" content="https://cdn.discordapp.com/attachments/793382333339271178/1055180454900285540/icon_black.jpg" />
+
         </Head>
 
         <section className="post headline">
