@@ -13,7 +13,7 @@ export default function Legal() {
                     <h2>Legal</h2>
 
 
-                    <p>Siret number: 948540927 00019</p>
+                    <p>Siret number: 948 540 927 00019 (<a href="https://annuaire-entreprises.data.gouv.fr/etablissement/94854092700019" target="_blank" rel="noopener noreferrer"><u>see more</u></a>).</p>
 
                     <p>
                         Mockups are made by {' '}

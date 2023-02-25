@@ -1278,6 +1278,10 @@ section.post.content div.markdown {
   max-width: 1060px;
 }
 
+section.post.content div.markdown a {
+  text-decoration: underline;
+}
+
 section.post.content div.markdown h2 {
   width: 100%;
   max-width: 730px;

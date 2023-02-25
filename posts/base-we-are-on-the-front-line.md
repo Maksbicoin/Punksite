@@ -15,7 +15,7 @@ As developers, we are constantly on the front line of innovation, shaping the fu
 
 ![photo](https://assets.stratusagency.io/base2222-min-gigapixel-low_res-scale-2_00x-min.webp)
 
-## At Base, we are proud to be on the front line of this transformation, offering one of the firsts smart contracts on it.
+## At Base, we are proud to be on the front line of this transformation, offering one of the firsts smart contracts on it. $$[See more.](https://goerli.basescan.org/address/0xD1352B7484920aB2C68f7C79c81ef83DbF4f26Da)
 
 *But what does it mean to be on the front line of blockchain innovation?* For us, it means constantly pushing the boundaries of what is possible, exploring new use cases, and working with partners and customers to create value.
 
